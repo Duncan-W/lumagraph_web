@@ -27,7 +27,7 @@
         <nav class="bg-white border-gray-200 py-2.5 dark:bg-gray-900">
             <div class="flex flex-wrap items-center justify-between max-w-screen-xl px-4 mx-auto">
                 <a href="#" class="flex items-center">
-                    <img src="./images/logo.svg" class="h-6 mr-3 sm:h-9" alt="Landwind Logo" />
+                    <img src="{{ asset('images/logo.svg') }}" class="h-6 mr-3 sm:h-9" alt="Landwind Logo" />
                     <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Landwind</span>
                 </a>
                 <div class="flex items-center lg:order-2">
@@ -84,7 +84,7 @@
                 </div>
             </div>
             <div class="hidden lg:mt-0 lg:col-span-5 lg:flex">
-                <img src="./images/hero.png" alt="hero image">
+                <img src="{{ asset('images/hero.png') }}" alt="hero image">
             </div>                
         </div>
     </section>
@@ -180,11 +180,11 @@
                     </ul>
                     <p class="mb-8 font-light lg:text-xl">Deliver great service experiences fast - without the complexity of traditional ITSM solutions.</p>
                 </div>
-                <img class="hidden w-full mb-4 rounded-lg lg:mb-0 lg:flex" src="./images/feature-1.png" alt="dashboard feature image">
+                <img class="hidden w-full mb-4 rounded-lg lg:mb-0 lg:flex" src="{{ asset('images/feature-1.png') }}" alt="dashboard feature image">
             </div>
             <!-- Row -->
             <div class="items-center gap-8 lg:grid lg:grid-cols-2 xl:gap-16">
-                <img class="hidden w-full mb-4 rounded-lg lg:mb-0 lg:flex" src="./images/feature-2.png" alt="feature image 2">
+                <img class="hidden w-full mb-4 rounded-lg lg:mb-0 lg:flex" src="{{ asset('images/feature-2.png') }}" alt="feature image 2">
                 <div class="text-gray-500 sm:text-lg dark:text-gray-400">
                     <h2 class="mb-4 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white">We invest in the world’s potential</h2>
                     <p class="mb-8 font-light lg:text-xl">Deliver great service experiences fast - without the complexity of traditional ITSM solutions. Accelerate critical development work, eliminate toil, and deploy changes with ease.</p>
@@ -280,7 +280,7 @@
                     <p class="text-xl font-medium text-gray-900 md:text-2xl dark:text-white">"Landwind is just awesome. It contains tons of predesigned components and pages starting from login screen to complex dashboard. Perfect choice for your next SaaS application."</p>
                 </blockquote>
                 <figcaption class="flex items-center justify-center mt-6 space-x-3">
-                    <img class="w-6 h-6 rounded-full" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/michael-gouch.png" alt="profile picture">
+                    <img class="w-6 h-6 rounded-full" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/michael-gouch.png') }}" alt="profile picture">
                     <div class="flex items-center divide-x-2 divide-gray-500 dark:divide-gray-800">
                         <div class="pr-3 font-medium text-gray-900 dark:text-white">Micheal Gough</div>
                         <div class="pl-3 text-sm font-light text-gray-500 dark:text-gray-400">CEO at Google</div>
@@ -585,7 +585,7 @@
             <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-800 lg:my-8">
             <div class="text-center">
                 <a href="#" class="flex items-center justify-center mb-5 text-2xl font-semibold text-gray-900 dark:text-white">
-                    <img src="./images/logo.svg" class="h-6 mr-3 sm:h-9" alt="Landwind Logo" />
+                    <img src="{{ asset('images/logo.svg') }}" class="h-6 mr-3 sm:h-9" alt="Landwind Logo" />
                     Landwind    
                 </a>
                 <span class="block text-sm text-center text-gray-500 dark:text-gray-400">© 2021-2022 Landwind™. All Rights Reserved. Built with <a href="https://flowbite.com" class="text-blue-600 hover:underline dark:text-blue-500">Flowbite</a> and <a href="https://tailwindcss.com" class="text-blue-600 hover:underline dark:text-blue-500">Tailwind CSS</a>.
