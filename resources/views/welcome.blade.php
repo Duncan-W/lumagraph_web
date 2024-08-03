@@ -498,9 +498,6 @@ HTMLVideoElement.prototype.playBackwards = function () {
                     <h3 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Help center</h3>
                     <ul class="text-gray-500 dark:text-gray-400">
                         <li class="mb-4">
-                            <a href="#" class="hover:underline">Discord Server</a>
-                        </li>
-                        <li class="mb-4">
                             <a href="#" class="hover:underline">Twitter</a>
                         </li>
                         <li class="mb-4">
@@ -520,9 +517,6 @@ HTMLVideoElement.prototype.playBackwards = function () {
                         <li class="mb-4">
                             <a href="#" class="hover:underline">Licensing</a>
                         </li>
-                        <li class="mb-4">
-                            <a href="#" class="hover:underline">Terms</a>
-                        </li>
                     </ul>
                 </div>
 
@@ -533,7 +527,7 @@ HTMLVideoElement.prototype.playBackwards = function () {
                     <img src="{{ asset('images/logo.svg') }}" class="h-6 mr-3 sm:h-9" alt="Lumagraph Logo" />
                     Lumagraph    
                 </a>
-                <span class="block text-sm text-center text-gray-500 dark:text-gray-400">© 2021-2022 Lumagraph™. All Rights Reserved. Built with <a href="https://flowbite.com" class="text-blue-600 hover:underline dark:text-blue-500">Flowbite</a> and <a href="https://tailwindcss.com" class="text-blue-600 hover:underline dark:text-blue-500">Tailwind CSS</a>.
+                <span class="block text-sm text-center text-gray-500 dark:text-gray-400">&copy; {{ date('Y') }} Lumagraph&trade;. All Rights Reserved.
                 </span>
                 <ul class="flex justify-center mt-5 space-x-5">
                     <li>
