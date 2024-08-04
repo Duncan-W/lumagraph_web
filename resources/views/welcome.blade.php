@@ -10,6 +10,7 @@
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
+        <link rel="icon" href="{{asset('images/lumagraph.svg') }}" type="image/svg+xml">
         @vite(['resources/css/app.css', 'resources/js/app.js', 'resources/js/menu.js'])
         
 
@@ -181,7 +182,7 @@ HTMLVideoElement.prototype.playBackwards = function () {
             </div>
             <!-- Row -->
             <div class="items-center gap-8 lg:grid lg:grid-cols-2 xl:gap-16">
-                <img class="hidden w-full mb-4 rounded-lg lg:mb-0 lg:flex" src="{{ asset('images/feature-2.png') }}" alt="feature image 2">
+                <img class="hidden w-full mb-4 rounded-lg lg:mb-0 lg:flex" src="{{ asset('images/Thubmnail- UI_Component.png') }}" alt="feature image 2">
                 <div class="text-gray-500 sm:text-lg dark:text-gray-400">
                     <h2 class="mb-4 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white">Consultancy options to suit you</h2>
                     <p class="mb-8 font-light lg:text-xl">Streamline your business operations. Explore options to supercharge your efficiency with transparent pricing and demonstrable ROI.</p>
@@ -203,7 +204,7 @@ HTMLVideoElement.prototype.playBackwards = function () {
                             <span class="text-base font-medium leading-tight text-gray-900 dark:text-white">Potential for further extensions and modifications as required.</span>
                         </li>
                     </ul>
-                    <p class="font-light lg:text-xl">Deliver great service experiences fast - without the complexity of traditional ITSM solutions.</p>
+                    <p class="font-light lg:text-xl">Lumagraph boasts prompt online responses and site vists for businesses located in Dublin.</p>
                 </div>
             </div>
         </div>
