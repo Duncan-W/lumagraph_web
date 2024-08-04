@@ -87,8 +87,8 @@
                             <a href="#" class="block py-2 pl-3 pr-4 text-gray-800 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-800 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-800 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-800">Contact</a>
                         </li>
                     </ul>
-                    <button id="toggleButton" class="hidden absolute bottom-1 left-1/2 transform -translate-x-1/2 w-1/5" aria-hidden="true">
-                        <div class="h-0.5 bg-black"></div>
+                    <button id="toggleButton" style="margin:-6px;" class="hidden absolute bottom-1 left-1/2 transform -translate-x-1/2 w-1/5" aria-hidden="true">
+                        <div  class="h-0.5 m-2 bg-black"></div>
                     </button>
                 </div>
             </div>
@@ -531,7 +531,7 @@ HTMLVideoElement.prototype.playBackwards = function () {
             <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-800 lg:my-8">
             <div class="text-center">
                 <a href="#" class="flex items-center justify-center mb-5 text-2xl font-semibold text-gray-900 dark:text-white">
-                    <img src="{{ asset('images/logo.svg') }}" class="h-6 mr-3 sm:h-9" alt="Lumagraph Logo" />
+                    <img src="{{ asset('images/lumagraph.svg') }}" class="h-6 mr-3 sm:h-9" alt="Lumagraph Logo" />
                     Lumagraph    
                 </a>
                 <span class="block text-sm text-center text-gray-500 dark:text-gray-400">&copy; {{ date('Y') }} Lumagraph&trade;. All Rights Reserved.
