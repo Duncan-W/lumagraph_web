@@ -16,19 +16,19 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/about', function () {
+Route::get('/products', function () {
     return view('products');
 });
 
-Route::get('/about', function () {
+Route::get('/team', function () {
     return view('team');
 });
 
-Route::get('/about', function () {
+Route::get('/blog', function () {
     return view('blog');
 });
 
-Route::get('/about', function () {
+Route::get('/contact', function () {
     return view('contact');
 });
 
