@@ -14,14 +14,14 @@
       <div class="grid gap-8 mb-6 lg:mb-16 md:grid-cols-2">
           <div class="items-center bg-gray-50 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700">
               <a href="#">
-                  <img class="w-[150px] rounded-lg sm:rounded-none sm:rounded-l-lg" src="{{asset('images/0_prompt_1_620808.jpg')}}" alt="Bonnie Avatar">
+                  <img class="min-w-150 max-w-150 rounded-lg sm:rounded-none sm:rounded-l-lg" src="{{asset('images/0_prompt_1_620808.jpg')}}" alt="Bonnie Avatar">
               </a>
               <div class="p-5">
                   <h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
                       <a href="#">Russell Wallace</a>
                   </h3>
                   <span class="text-gray-500 dark:text-gray-400">CEO & Developer</span>
-                  <p class="mt-3 mb-4 font-light text-gray-500 dark:text-gray-400">Russell drives the technical strategy of the Lumagraph platform and brand.</p>
+                  <p class="mt-3 mb-4 font-light text-gray-500 dark:text-gray-400">Russell drives the technical strategy of the Lumagraph platform and brand. With over 14 years experience in artificial intelligence and software engineering, Russell is an expert in automation and machine learning development.</p>
                   <ul class="flex space-x-4 sm:mt-0">
                       <li>
                           <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
@@ -48,14 +48,14 @@
           </div> 
           <div class="items-center bg-gray-50 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700">
               <a href="#">
-                  <img class="w-[150px]  rounded-lg sm:rounded-none sm:rounded-l-lg" src="{{asset('images/20220708_111252.jpg')}}" alt="Jese Avatar">
+                  <img style="width:450px" class="min-w-150 max-w-150  rounded-lg sm:rounded-none sm:rounded-l-lg" src="{{asset('images/20220708_111252.jpg')}}" alt="Jese Avatar">
               </a>
               <div class="p-5">
                   <h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
                       <a href="#">Duncan Wallace</a>
                   </h3>
                   <span class="text-gray-500 dark:text-gray-400">CTO</span>
-                  <p class="mt-3 mb-4 font-light text-gray-500 dark:text-gray-400">Duncan drives the technical strategy of the Lumagraph platform and brand.</p>
+                  <p class="mt-3 mb-4 font-light text-gray-500 dark:text-gray-400">Duncan boasts a doctorate in Computer Science specalising in machine learning and data mining, and leads Lumagraph's strategic goals and marketing efforts.</p>
                   <ul class="flex space-x-4 sm:mt-0">
                       <li>
                           <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">

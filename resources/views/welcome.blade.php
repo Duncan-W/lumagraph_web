@@ -67,7 +67,7 @@ HTMLVideoElement.prototype.playBackwards = function () {
                         <li class="flex space-x-3">
                             <!-- Icon -->
                             <svg class="flex-shrink-0 w-5 h-5 text-blue-500 dark:text-blue-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                            <span class="text-base font-medium leading-tight text-gray-900 dark:text-white">Fully customisable to address the specific requirements of your business.</span>
+                            <span class="text-base font-medium leading-tight text-gray-900 dark:text-white">Fully customisable software development to address the specific requirements of your business.</span>
                         </li>
                         <li class="flex space-x-3">
                             <!-- Icon -->
@@ -80,7 +80,7 @@ HTMLVideoElement.prototype.playBackwards = function () {
                             <span class="text-base font-medium leading-tight text-gray-900 dark:text-white">Compliant with GDPR and ePrivacy legislation, ensuring your data management practices meet the highest standards of data protection and privacy</span>
                         </li>
                     </ul>
-                    <p class="mb-8 font-light lg:text-xl">Deliver great service experiences fast - without the complexity of traditional ITSM solutions.</p>
+                   
                 </div>
                 <img class="hidden w-full mb-4 rounded-lg lg:mb-0 lg:flex" src="{{ asset('images/feature-1.png') }}" alt="dashboard feature image">
             </div>
