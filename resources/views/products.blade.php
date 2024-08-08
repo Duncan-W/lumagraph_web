@@ -18,14 +18,15 @@
     <section class="bg-white dark:bg-gray-900">
         <div class="items-center max-w-screen-xl px-4 py-8 mx-auto lg:grid lg:grid-cols-4 lg:gap-16 xl:gap-24 lg:py-24 lg:px-6">
             <div class="col-span-2 mb-8">
-                <h2 class="mt-3 mb-4 text-3xl font-extrabold tracking-tight text-gray-900 md:text-3xl dark:text-white">Trusted by over 600 million users and 10,000 teams</h2>
+                <h2 class="mt-3 mb-4 text-3xl font-extrabold tracking-tight text-gray-900 md:text-3xl dark:text-white">Trusted by clients nationally and internationally</h2>
                 <p class="font-light text-gray-500 sm:text-xl dark:text-gray-400">Our rigorous security and compliance standards are at the heart of all we do. We work tirelessly to protect you and your customers.</p>
                 <div class="pt-6 mt-6 space-y-4 border-t border-gray-200 dark:border-gray-800">
                     <div>
                       <a href="#" class="inline-flex items-center text-base font-medium text-blue-600 hover:text-blue-900 dark:text-blue-500 dark:hover:text-blue-800">
                         Explore Legality Guide
                         <svg class="w-5 h-5 ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-                      </a>
+                        
+                    </a>
                     </div>
                     <div>
                       <a href="#" class="inline-flex items-center text-base font-medium text-blue-600 hover:text-blue-900 dark:text-blue-500 dark:hover:text-blue-800">
@@ -42,13 +43,14 @@
                     <p class="font-light text-gray-500 dark:text-gray-400">For Lumagraph, with zero maintenance downtime</p>
                 </div>
                 <div>
+                
                     <svg class="w-10 h-10 mb-2 text-blue-600 md:w-12 md:h-12 dark:text-blue-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"></path></svg>
                     <h3 class="mb-2 text-2xl font-bold dark:text-white">600M+ Users</h3>
                     <p class="font-light text-gray-500 dark:text-gray-400">Trusted by over 600 milion users around the world</p>
                 </div>
                 <div>
-                    <svg class="w-10 h-10 mb-2 text-blue-600 md:w-12 md:h-12 dark:text-blue-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM4.332 8.027a6.012 6.012 0 011.912-2.706C6.512 5.73 6.974 6 7.5 6A1.5 1.5 0 019 7.5V8a2 2 0 004 0 2 2 0 011.523-1.943A5.977 5.977 0 0116 10c0 .34-.028.675-.083 1H15a2 2 0 00-2 2v2.197A5.973 5.973 0 0110 16v-2a2 2 0 00-2-2 2 2 0 01-2-2 2 2 0 00-1.668-1.973z" clip-rule="evenodd"></path></svg>
-                    <h3 class="mb-2 text-2xl font-bold dark:text-white">100+ countries</h3>
+                <svg class="w-10 h-10 mb-2 text-blue-600 md:w-12 md:h-12 dark:text-blue-500" fill="currentColor"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 125" style="enable-background:new 0 0 100 100;" xml:space="preserve"><path d="M50,2C23.5,2,2,23.5,2,50c0,26.5,21.5,48,48,48s48-21.5,48-48C98,23.5,76.5,2,50,2z M74.7,38.4L46.5,66.7  c-0.9,0.9-2.2,1.5-3.5,1.5s-2.6-0.5-3.5-1.5L25.3,52.5c-2-2-2-5.1,0-7.1c2-2,5.1-2,7.1,0l10.6,10.6l24.7-24.7c2-2,5.1-2,7.1,0  C76.7,33.3,76.7,36.4,74.7,38.4z"/></svg>  
+                    <h3 class="mb-2 text-2xl font-bold dark:text-white">Fixed priced </h3>
                     <p class="font-light text-gray-500 dark:text-gray-400">Have used Lumagraph to create functional websites</p>
                 </div>
                 <div>
