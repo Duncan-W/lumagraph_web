@@ -17,7 +17,8 @@ use App\Models\Post;
 Route::resource('posts', PostController::class);
 
 Route::get('/', function () {
-    return view('welcome');
+    $latestPost = Post::latest()->first();
+    return view('welcome', compact('latestPost'));
 });
 
 Route::get('/products', function () {
@@ -29,7 +30,8 @@ Route::get('/team', function () {
 });
 
 Route::get('/blog', function () {
-    return view('blog');
+    $latestPost = Post::latest()->first();
+    return view('blog', compact('latestPost'));
 });
 
 Route::get('/contact', function () {

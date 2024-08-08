@@ -1,15 +1,20 @@
 @extends('layouts.app')
 @section('content')
 <h1>All Blog Posts</h1>
-    @foreach ($posts as $post)
-        <div>
-            <h2>{{ $post->title }}</h2>
-            <p>{{ Str::limit($post->body, 150) }}</p>
-            <a href="{{ route('posts.show', $post->id) }}">Read More</a>
-        </div>
-    @endforeach
+    @if($latestPost)
+        <div class="latest-post">
+            <h2>{{ $latestPost->title }}</h2>
 
-    {{ $posts->links() }}
+            @if ($latestPost->image)
+                <img src="{{ $latestPost->image }}" alt="{{ $latestPost->title }}" style="max-width: 100%;">
+            @endif
+
+            <p>{{ Str::limit($latestPost->body, 150) }}</p>
+            <a href="{{ route('posts.show', $latestPost->id) }}">Read More</a>
+        </div>
+    @else
+        <p>No blog posts yet. Stay tuned!</p>
+    @endif
     <div style="height: 1vh;"></div>
     <!-- Start block -->
    
