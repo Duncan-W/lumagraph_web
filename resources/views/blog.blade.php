@@ -1,20 +1,7 @@
 @extends('layouts.app')
 @section('content')
 <h1>All Blog Posts</h1>
-    @if($latestPost)
-        <div class="latest-post">
-            <h2>{{ $latestPost->title }}</h2>
 
-            @if ($latestPost->image)
-                <img src="{{ $latestPost->image }}" alt="{{ $latestPost->title }}" style="max-width: 100%;">
-            @endif
-
-            <p>{{ Str::limit($latestPost->body, 150) }}</p>
-            <a href="{{ route('posts.show', $latestPost->id) }}">Read More</a>
-        </div>
-    @else
-        <p>No blog posts yet. Stay tuned!</p>
-    @endif
     <div style="height: 1vh;"></div>
     <!-- Start block -->
    
@@ -28,7 +15,22 @@
     <!-- End block -->
     <!-- Start block -->
     <section class="bg-gray-50 dark:bg-gray-900">
+
         <div class="max-w-screen-xl px-4 py-8 mx-auto space-y-12 lg:space-y-20 lg:py-24 lg:px-6">
+        @if($latestPost)
+        <div class="latest-post">
+            <h2>{{ $latestPost->title }}</h2>
+
+            @if ($latestPost->image)
+                <img src="{{ $latestPost->image }}" alt="{{ $latestPost->title }}" style="max-width: 100%;">
+            @endif
+
+            <p>{{ Str::limit($latestPost->body, 150) }}</p>
+            <a href="{{ route('posts.show', $latestPost->id) }}">Read More</a>
+        </div>
+    @else
+        <p>No blog posts yet. Stay tuned!</p>
+    @endif
             <!-- Row -->
             <div class="items-center gap-8 lg:grid lg:grid-cols-2 xl:gap-16">
                 <div class="text-gray-500 sm:text-lg dark:text-gray-400">
