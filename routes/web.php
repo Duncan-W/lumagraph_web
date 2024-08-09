@@ -17,7 +17,7 @@ use App\Models\Post;
 Route::resource('posts', PostController::class);
 
 Route::get('/', function () {
-    $latestPost = Post::latest()->last();
+    $latestPost = Post::latest()->first();
     return view('welcome', compact('latestPost'));
 })->name('home');
 
