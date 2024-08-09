@@ -14,8 +14,9 @@
     @if ($post->image)
         <img src="{{ $post->image }}" alt="{{ $post->title }}" style="max-width: 100%;">
     @endif
-
-    {!! \Illuminate\Support\Str::markdown($post->body) !!}
+    <div class="prose">
+        {!! \Illuminate\Support\Str::markdown($post->body) !!}
+    </div>
     <a href="{{ route('posts.index') }}">Back to Posts</a>
     </section>
 @endsection
