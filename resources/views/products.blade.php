@@ -19,7 +19,7 @@
         <div class="items-center max-w-screen-xl px-4 py-8 mx-auto lg:grid lg:grid-cols-4 lg:gap-16 xl:gap-24 lg:py-24 lg:px-6">
             <div class="col-span-2 mb-8">
                 <h2 class="mt-3 mb-4 text-3xl font-extrabold tracking-tight text-gray-900 md:text-3xl dark:text-white">Trusted by clients nationally and internationally</h2>
-                <p class="font-light text-gray-500 sm:text-xl dark:text-gray-400">Our rigorous security and compliance standards are at the heart of all we do. We work tirelessly to protect you and your customers.</p>
+                <p class="font-light text-gray-500 sm:text-xl dark:text-gray-400">our consultancy process is designed to transform your IT challenges into strategic advantages. Here’s how we make it happen.</p>
                 <div class="pt-6 mt-6 space-y-4 border-t border-gray-200 dark:border-gray-800">
                     <div>
                       <a href="#" class="inline-flex items-center text-base font-medium text-blue-600 hover:text-blue-900 dark:text-blue-500 dark:hover:text-blue-800">
@@ -38,25 +38,26 @@
             </div>
             <div class="col-span-2 space-y-8 md:grid md:grid-cols-2 md:gap-12 md:space-y-0">
                 <div>
-                    <svg class="w-10 h-10 mb-2 text-blue-600 md:w-12 md:h-12 dark:text-blue-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M2 5a2 2 0 012-2h12a2 2 0 012 2v2a2 2 0 01-2 2H4a2 2 0 01-2-2V5zm14 1a1 1 0 11-2 0 1 1 0 012 0zM2 13a2 2 0 012-2h12a2 2 0 012 2v2a2 2 0 01-2 2H4a2 2 0 01-2-2v-2zm14 1a1 1 0 11-2 0 1 1 0 012 0z" clip-rule="evenodd"></path></svg>
+                    <svg class="w-10 h-10 mb-2 text-blue-600 md:w-12 md:h-12 dark:text-blue-500" fill="currentColor"  xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50" width="50px" height="50px"><path d="M 25 3 C 18.363281 3 13 8.363281 13 15 L 13 20 L 9 20 C 7.300781 20 6 21.300781 6 23 L 6 47 C 6 48.699219 7.300781 50 9 50 L 41 50 C 42.699219 50 44 48.699219 44 47 L 44 23 C 44 21.300781 42.699219 20 41 20 L 37 20 L 37 15 C 37 8.363281 31.636719 3 25 3 Z M 25 5 C 30.566406 5 35 9.433594 35 15 L 35 20 L 15 20 L 15 15 C 15 9.433594 19.433594 5 25 5 Z M 25 30 C 26.699219 30 28 31.300781 28 33 C 28 33.898438 27.601563 34.6875 27 35.1875 L 27 38 C 27 39.101563 26.101563 40 25 40 C 23.898438 40 23 39.101563 23 38 L 23 35.1875 C 22.398438 34.6875 22 33.898438 22 33 C 22 31.300781 23.300781 30 25 30 Z"/></svg>
                     <h3 class="mb-2 text-2xl font-bold dark:text-white">99.99% uptime</h3>
-                    <p class="font-light text-gray-500 dark:text-gray-400">For Lumagraph, with zero maintenance downtime</p>
+                    <p class="font-light text-gray-500 dark:text-gray-400">Rigorous security and compliance standards</p>
                 </div>
                 <div>
                 
                     <svg class="w-10 h-10 mb-2 text-blue-600 md:w-12 md:h-12 dark:text-blue-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"></path></svg>
+                    <svg class="w-10 h-10 mb-2 text-blue-600 md:w-12 md:h-12 dark:text-blue-500" fill="currentColor" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50" width="50px" height="50px"><path d="M 36.875 -0.03125 C 32.851563 0.0820313 27.898438 0.722656 25.09375 3.53125 L 24.40625 4.1875 C 19.851563 8.773438 19.886719 15.988281 24.46875 20.59375 L 29.46875 25.59375 C 31.691406 27.824219 34.609375 29.0625 37.6875 29.0625 C 40.730469 29.0625 43.617188 27.824219 45.8125 25.625 L 46.46875 24.96875 C 49.957031 21.484375 49.988281 14.289063 50 11.21875 C 50.003906 10.679688 49.882813 10.257813 49.59375 9.96875 C 49.359375 9.734375 49.023438 9.625 48.6875 9.625 C 48.152344 9.625 47.738281 9.9375 47.53125 10.125 L 41.03125 16.65625 C 40.894531 16.679688 40.578125 16.71875 39.96875 16.71875 C 37.78125 16.71875 34.726563 16.292969 33.96875 15.96875 C 33.464844 14.867188 33.074219 10.042969 33.40625 9.03125 C 34.421875 8.015625 39.960938 2.445313 40 2.40625 C 40.175781 2.207031 40.75 1.515625 40.40625 0.75 C 40.273438 0.457031 39.914063 -0.0273438 38.96875 -0.03125 L 38.53125 -0.03125 C 38.003906 -0.03125 37.449219 -0.046875 36.875 -0.03125 Z M 21.375 19.9375 L 2.3125 37.28125 C 0.292969 39.304688 -1.496094 43.9375 2.3125 47.75 C 4.066406 49.503906 5.902344 49.96875 7.375 49.96875 C 7.753906 49.96875 8.085938 49.925781 8.40625 49.875 C 10.3125 49.589844 11.902344 48.601563 12.78125 47.71875 L 30.09375 28.65625 L 28.5 27.4375 L 22.59375 21.53125 Z"/></svg>
                     <h3 class="mb-2 text-2xl font-bold dark:text-white">600M+ Users</h3>
                     <p class="font-light text-gray-500 dark:text-gray-400">Trusted by over 600 milion users around the world</p>
                 </div>
                 <div>
-                <svg class="w-10 h-10 mb-2 text-blue-600 md:w-12 md:h-12 dark:text-blue-500" fill="currentColor"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 125" style="enable-background:new 0 0 100 100;" xml:space="preserve"><path d="M50,2C23.5,2,2,23.5,2,50c0,26.5,21.5,48,48,48s48-21.5,48-48C98,23.5,76.5,2,50,2z M74.7,38.4L46.5,66.7  c-0.9,0.9-2.2,1.5-3.5,1.5s-2.6-0.5-3.5-1.5L25.3,52.5c-2-2-2-5.1,0-7.1c2-2,5.1-2,7.1,0l10.6,10.6l24.7-24.7c2-2,5.1-2,7.1,0  C76.7,33.3,76.7,36.4,74.7,38.4z"/></svg>  
+                    <svg class="w-10 h-10 mb-2 text-blue-600 md:w-12 md:h-12 dark:text-blue-500" fill="currentColor"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 125" style="enable-background:new 0 0 100 100;" xml:space="preserve"><path d="M50,2C23.5,2,2,23.5,2,50c0,26.5,21.5,48,48,48s48-21.5,48-48C98,23.5,76.5,2,50,2z M74.7,38.4L46.5,66.7  c-0.9,0.9-2.2,1.5-3.5,1.5s-2.6-0.5-3.5-1.5L25.3,52.5c-2-2-2-5.1,0-7.1c2-2,5.1-2,7.1,0l10.6,10.6l24.7-24.7c2-2,5.1-2,7.1,0  C76.7,33.3,76.7,36.4,74.7,38.4z"/></svg>  
                     <h3 class="mb-2 text-2xl font-bold dark:text-white">Fixed priced </h3>
                     <p class="font-light text-gray-500 dark:text-gray-400">Have used Lumagraph to create functional websites</p>
                 </div>
                 <div>
-                    <svg class="w-10 h-10 mb-2 text-blue-600 md:w-12 md:h-12 dark:text-blue-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"></path></svg>
+                    <svg class="w-10 h-10 mb-2 text-blue-600 md:w-12 md:h-12 dark:text-blue-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M2 5a2 2 0 012-2h12a2 2 0 012 2v2a2 2 0 01-2 2H4a2 2 0 01-2-2V5zm14 1a1 1 0 11-2 0 1 1 0 012 0zM2 13a2 2 0 012-2h12a2 2 0 012 2v2a2 2 0 01-2 2H4a2 2 0 01-2-2v-2zm14 1a1 1 0 11-2 0 1 1 0 012 0z" clip-rule="evenodd"></path></svg>
                     <h3 class="mb-2 text-2xl font-bold dark:text-white">5+ Million</h3>
-                    <p class="font-light text-gray-500 dark:text-gray-400">Transactions per day</p>
+                    <p class="font-light text-gray-500 dark:text-gray-400">PAAS and SAAS options</p>
                 </div>
             </div>
         </div>
