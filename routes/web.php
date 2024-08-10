@@ -3,6 +3,9 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
 use App\Models\Post;
+use App\Http\Controllers\ContactController;
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -15,6 +18,9 @@ use App\Models\Post;
 */
 
 Route::resource('posts', PostController::class);
+
+Route::post('/contact', [ContactController::class, 'submit']
+)->name('contact.submit');
 
 Route::get('/', function () {
     $latestPost = Post::latest()->first();
