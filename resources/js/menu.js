@@ -2,10 +2,11 @@
 window.addEventListener('scroll', function() {
     const button = document.getElementById('toggleButton');
     const halfWayPoint = document.documentElement.scrollHeight / 5;
+    const scrolledDown100px = window.scrollY > 100;
     const menu = document.getElementById('menu');
 
     if (button) {
-        if (window.scrollY > halfWayPoint) {
+        if (window.scrollY > halfWayPoint || scrolledDown100px) {
             button.classList.remove('hidden');
         } else {
             button.classList.add('hidden');
