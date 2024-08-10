@@ -26,9 +26,9 @@
               </p>
               <div class="flex justify-between items-center">
                   <div class="flex items-center space-x-4">
-                      <img class="w-7 h-7 rounded-full" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/jese-leos.png" alt="Author avatar" />
+                      <img class="w-7 h-7 rounded-full" src="{{ asset('images/lumagraph.svg') }}" alt="Author avatar" />
                       <span class="font-medium dark:text-white">
-                          {{ $post->author->name ?? 'Unknown Author' }} <!-- Assuming you have an author relationship -->
+                          {{ $post->author->name ?? 'Lumagraph' }} <!-- Need author table, and 1-n link; remember picture -->
                       </span>
                   </div>
                   <a href="{{ route('posts.show', $post->id) }}" class="inline-flex items-center font-medium text-primary-600 dark:text-primary-500 hover:underline">
