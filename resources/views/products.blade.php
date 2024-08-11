@@ -66,9 +66,43 @@
     <!-- Start block -->
  
     <section class="bg-white dark:bg-gray-900">
-        <div class="max-w-screen-xl px-4 py-8 mx-auto lg:py-24 lg:px-6">
+        <div class="max-w-screen-xl px-4 mx-auto lg:py-12 lg:px-6">
             <div class="max-w-screen-md mx-auto mb-8 text-center lg:mb-12">
                 <h2 class="mb-4 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white">Designed for business teams like yours</h2>
+                <div class="w-full flex items-center justify-center space-x-4">
+                    <div class="text-center">
+                        <img src="image1.jpg" alt="Image 1" class="w-24 h-24 mx-auto">
+                        <p class="text-sm mt-2">Image 1</p>
+                    </div>
+
+                    <svg class="w-6 h-6 text-gray-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M12.293 4.293a1 1 0 011.414 0l5 5a1 1 0 010 1.414l-5 5a1 1 0 11-1.414-1.414L15.586 10H3a1 1 0 110-2h12.586l-3.293-3.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                    </svg>
+
+                    <div class="text-center">
+                        <img src="image2.jpg" alt="Image 2" class="w-24 h-24 mx-auto">
+                        <p class="text-sm mt-2">Image 2</p>
+                    </div>
+
+                    <svg class="w-6 h-6 text-gray-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M12.293 4.293a1 1 0 011.414 0l5 5a1 1 0 010 1.414l-5 5a1 1 0 11-1.414-1.414L15.586 10H3a1 1 0 110-2h12.586l-3.293-3.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                    </svg>
+
+                    <div class="text-center">
+                        <img src="image3.jpg" alt="Image 3" class="w-24 h-24 mx-auto">
+                        <p class="text-sm mt-2">Image 3</p>
+                    </div>
+
+                    <svg class="w-6 h-6 text-gray-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M12.293 4.293a1 1 0 011.414 0l5 5a1 1 0 010 1.414l-5 5a1 1 0 11-1.414-1.414L15.586 10H3a1 1 0 110-2h12.586l-3.293-3.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                    </svg>
+
+                    <div class="text-center">
+                        <img src="image4.jpg" alt="Image 4" class="w-24 h-24 mx-auto">
+                        <p class="text-sm mt-2">Image 4</p>
+                    </div>
+                </div>
+                
                 <p class="mb-5 font-light text-gray-500 sm:text-xl dark:text-gray-400">Here at Lumagraph we focus on markets where technology, innovation, and capital can unlock long-term value and drive economic growth.</p>
             </div>
             <div class="space-y-8 lg:grid lg:grid-cols-3 sm:gap-6 xl:gap-10 lg:space-y-0">
