@@ -22,12 +22,12 @@
             <div class="p-6 space-y-6">
 
             <p class="text-lg font-medium mb-4">Call us at:</p>
-            <div class=" p-6 flex items-center space-x-4">
-                <span class="text-2xl font-bold text-blue-500">+1 (123) 456-7890</span>
+            <div class="flex items-center space-x-4">
+                <span class="text-2xl font-bold text-blue-500">+353 (0) 86 406-0347</span>
                 <button onclick="copyToClipboard()" class="bg-blue-500 text-white px-4 py-2 rounded-lg shadow hover:bg-blue-600 focus:outline-none">
                     Copy
                 </button>
-                <a href="tel:+11234567890" class="bg-blue-500 hover:bg-blue-600 text-white p-2 rounded-lg">
+                <a href="tel:+353864060347" class="bg-blue-500 hover:bg-blue-600 text-white p-2 rounded-lg">
                     Dial
                 </a>
             </div>
@@ -85,7 +85,7 @@ HTMLVideoElement.prototype.playBackwards = function () {
        
 
         function copyToClipboard() {
-        const number = "837374"; // Lumagraph phone number
+        const number = "+353864060347"; // Lumagraph phone number
         navigator.clipboard.writeText(number).then(function() {
             //alert("Number copied to clipboard!");
         }, function(err) {
