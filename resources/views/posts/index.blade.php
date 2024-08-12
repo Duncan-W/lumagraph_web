@@ -1,5 +1,6 @@
 @extends('layouts.app')
 @section('content')
+
 <div style="height: 15vh;"></div>
 <section class="bg-white dark:bg-gray-900">
   <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
@@ -22,13 +23,16 @@
                   <a href="{{ route('posts.show', $post->id) }}">{{ $post->title }}</a>
               </h2>
               <p class="mb-5 font-light text-gray-500 dark:text-gray-400">
+              <time datetime="{{ $post->created_at->toIso8601String() }}">
+                    {{ $post->created_at ? $post->created_at->format('Y-m-d') : '' }} <!-- blank on empty date -->
+                </time>
                   {{ Str::limit(strip_tags($post->body), 150) }}
               </p>
               <div class="flex justify-between items-center">
                   <div class="flex items-center space-x-4">
                       <img class="w-7 h-7 rounded-full" src="{{ asset('images/lumagraph.svg') }}" alt="Author avatar" />
                       <span class="font-medium dark:text-white">
-                          {{ $post->author->name ?? 'Lumagraph' }} <!-- Need author table, and 1-n link; remember picture -->
+                          {{ $post->user->name ?? 'Lumagraph' }} <!-- Need author table, and 1-n link; remember picture -->
                       </span>
                   </div>
                   <a href="{{ route('posts.show', $post->id) }}" class="inline-flex items-center font-medium text-primary-600 dark:text-primary-500 hover:underline">

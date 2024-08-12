@@ -35,11 +35,7 @@ Route::get('/team', function () {
     return view('team');
 })->name('team');
 
-Route::get('/blog', function () {
-    $posts = Post::all();
-    $latestPost = Post::latest()->first();
-    return view('blog', compact('posts'));
-})->name('blog');
+Route::get('/blog', [PostController::class, 'index'])->name('blog');
 
 Route::get('/contact', function () {
     return view('contact');
