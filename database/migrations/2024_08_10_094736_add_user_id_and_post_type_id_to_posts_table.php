@@ -12,8 +12,14 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('posts', function (Blueprint $table) {
-            $table->foreignId('user_id')->nullable()->constrained('users')->nullOnDelete();
-            $table->foreignId('post_type_id')->nullable()->constrained('post_types')->nullOnDelete(); 
+            // Add columns only if they don't exist
+            if (!Schema::hasColumn('posts', 'user_id')) {
+                $table->bigInteger('user_id')->unsigned()->nullable();
+            }
+
+            if (!Schema::hasColumn('posts', 'post_type_id')) {
+                $table->bigInteger('post_type_id')->unsigned()->nullable();
+            }
         });
     }
 
