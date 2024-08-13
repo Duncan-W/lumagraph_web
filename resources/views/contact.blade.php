@@ -95,7 +95,7 @@
                             </div>
                         </div>
                         <div class="text-center">
-                            <button type="submit" class="bg-blue-800  px-6 py-3 font-xl rounded-md sm:mb-0">Send Message</button>
+                            <button type="submit" class="bg-blue-800  px-6 py-3 font-xl rounded-md sm:mb-0 ">Send Message</button>
                         </div>
                     </form>
                 </div>
