@@ -1,6 +1,20 @@
 @extends('layouts.app')
 @section('content')
-    <h1>All Blog Posts</h1>
+
+@php
+                // Assuming $post->image contains the relative path to the image, e.g., 'images/posts/image1.jpg'
+                $imagePath = 'images/posts/' . $post->image;
+                // default image
+                $imageUrl = 'https://images.unsplash.com/photo-1682407186023-12c70a4a35e0?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=2832&amp;q=80';
+
+                // Check if the image file exists in the public directory
+                if (File::exists(public_path($imagePath))) {
+                    $imageUrl = asset($imagePath);
+                }
+               
+@endphp
+
+    <h1>{{ $post->title }}</h1>
 
     <div style="height: 1vh;"></div>
     <!-- Start block -->
@@ -12,9 +26,7 @@
     <section class="bg-gray-50 dark:bg-gray-900">
         <div class="pt-8 px-4 mx-auto max-w-screen-sm text-center mb-8 lg:mb-16">
             <h1 class="max-w-2xl mb-4 text-4xl font-extrabold leading-none tracking-tight md:text-5xl xl:text-6xl dark:text-white">{{ $post->title }}</h1>
-            @if ($post->image)
-                <img src="{{ $post->image }}" alt="{{ $post->title }}" style="max-width: 100%;">
-            @endif
+                <img src="{{ $imageUrl }}" alt="{{ $post->title }}" style="max-width: 100%;">
         </div> 
         <div class="prose" style="margin:auto">
             {!! \Illuminate\Support\Str::markdown($post->body) !!}
