@@ -23,14 +23,14 @@
                 <div class="pt-6 mt-6 space-y-4 border-t border-gray-200 dark:border-gray-800">
                     <div>
                       <a href="#" class="inline-flex items-center text-base font-medium text-blue-600 hover:text-blue-900 dark:text-blue-500 dark:hover:text-blue-800">
-                        Explore Legality Guide
+                        Explore Our Team
                         <svg class="w-5 h-5 ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
                         
                     </a>
                     </div>
                     <div>
                       <a href="#" class="inline-flex items-center text-base font-medium text-blue-600 hover:text-blue-900 dark:text-blue-500 dark:hover:text-blue-800">
-                          Visit the Trust Center
+                          Visit Our Blog
                           <svg class="w-5 h-5 ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
                       </a>
                       </div>
@@ -69,9 +69,9 @@
  
     <section class="bg-white dark:bg-gray-900 lg:-mt-16" >
 
-        <div class="max-w-screen-xl px-4 mx-auto lg:py-12 lg:px-6">
-            <div class="flex justify-center w-full mb-8">
-                <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Feature Image" class="w-3/4 h-auto rounded">
+        <div class="max-w-screen-xl px-4 mx-auto lg:py-12 lg:px-6 lg:-mt-8">
+            <div class="flex justify-center w-full mb-8 ">
+                <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Feature Image" class="w-3/4 h-auto rounded shadow-xl shadow-blue-gray-900/50">
             </div>
             <div class="mx-auto mb-8 text-center lg:mb-12">
                 <h2 class="mb-10 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white">Our product lifecycle</h2>
@@ -217,6 +217,17 @@
                 
                 <p class="mt-8 mb-5 font-light text-gray-500 sm:text-xl dark:text-gray-400">Here at Lumagraph we focus on markets where technology, innovation, and capital can unlock long-term value and drive economic growth.</p>
             </div>
+                <!-- Start block -->
+            <section class="bg-white dark:bg-gray-900">
+                <div class="max-w-screen-xl px-4 py-8 mx-auto lg:py-24 lg:px-6">
+                    <div class="max-w-screen-md mx-auto mb-8 text-center lg:mb-12">
+                        <h2 class="mb-4 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white">Designed for business teams like yours</h2>
+                        <p class="mb-5 font-light text-gray-500 sm:text-xl dark:text-gray-400">Here at Lumagraph we focus on markets where technology, innovation, and capital can unlock long-term value and drive economic growth.</p>
+                    </div>
+
+                </div>
+            </section>
+            <!-- End block -->
             <!--
             <div class="space-y-8 lg:grid lg:grid-cols-3 sm:gap-6 xl:gap-10 lg:space-y-0">
 

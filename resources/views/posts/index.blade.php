@@ -15,10 +15,17 @@
               <div class="flex justify-between items-center mb-5 text-gray-500">
                   <span class="bg-primary-100 text-primary-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-primary-200 dark:text-primary-800">
                       <svg class="mr-1 w-3 h-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2 6a2 2 0 012-2h6a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6zM14.553 7.106A1 1 0 0014 8v4a1 1 0 00.553.894l2 1A1 1 0 0018 13V7a1 1 0 00-1.447-.894l-2 1z"></path></svg>
-                      Tutorial
+                      {{ $post->post_type_id ? $post->post_type_id : 'Tutorial' }} <!-- blank on empty date -->
                   </span>
                   
               </div>
+              <div class="grid min-h-[140px] w-full place-items-center overflow-x-scroll rounded-lg p-6 lg:overflow-visible">
+                <img
+                    class="object-cover object-center w-full rounded-lg shadow-xl h-96 shadow-blue-gray-900/50"
+                    src="{{ $post->image ? $post->image : 'https://images.unsplash.com/photo-1682407186023-12c70a4a35e0?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=2832&amp;q=80' }}"
+                    alt="nature image"
+                />
+                </div>
               <h2 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                   <a href="{{ route('posts.show', $post->id) }}">{{ $post->title }}</a>
               </h2>
