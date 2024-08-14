@@ -186,17 +186,7 @@ HTMLVideoElement.prototype.playBackwards = function () {
         </div>
       </section>
     <!-- End block -->
-    <!-- Start block -->
-    <section class="bg-white dark:bg-gray-900">
-        <div class="max-w-screen-xl px-4 py-8 mx-auto lg:py-24 lg:px-6">
-            <div class="max-w-screen-md mx-auto mb-8 text-center lg:mb-12">
-                <h2 class="mb-4 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white">Designed for business teams like yours</h2>
-                <p class="mb-5 font-light text-gray-500 sm:text-xl dark:text-gray-400">Here at Lumagraph we focus on markets where technology, innovation, and capital can unlock long-term value and drive economic growth.</p>
-            </div>
 
-        </div>
-      </section>
-    <!-- End block -->
     <!-- Start block -->
  
     <section class="bg-gray-50 dark:bg-gray-900">
@@ -204,7 +194,7 @@ HTMLVideoElement.prototype.playBackwards = function () {
             <div class="max-w-screen-sm mx-auto text-center">
                 <h2 class="mb-4 text-3xl font-extrabold leading-tight tracking-tight text-gray-900 dark:text-white">Get your free quote today</h2>
                 <p class="mb-6 font-light text-gray-500 dark:text-gray-400 md:text-lg">Assessment and proposal design available</p>
-                <a href="#" class="text-white bg-blue-800 hover:bg-blue-900 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-800 focus:outline-none dark:focus:ring-blue-900">Free trial for 30 days</a>
+                <button data-modal-toggle="defaultModal" class="text-white bg-blue-800 hover:bg-blue-900 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-800 focus:outline-none dark:focus:ring-blue-900">Arrange consultation</button>
             </div>
         </div>
     </section>
