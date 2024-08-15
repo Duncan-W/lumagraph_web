@@ -4,6 +4,20 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Leading tech consultancy in Dublin, Ireland, specializing in data management and artificial intelligence for B2B clients. Enhance your business with our tailored AI solutions and expert data strategies. Contact us today!">
+        <meta name="keywords" content="tech consultancy, data management, artificial intelligence, AI solutions, Dublin, B2B, data strategy, machine learning, predictive analytics">
+        <link rel="canonical" href="https://lumagraph.ie/">
+        <meta property="og:title" content="Tech Consultancy in Dublin | Data Management & AI Solutions - Lumagraph">
+        <meta property="og:description" content="Discover our expert tech consultancy services in Dublin, specializing in data management and AI solutions for B2B clients.">
+        <meta property="og:image" content="{{asset('images/lumagraph.svg') }}">
+        <meta property="og:url" content="https://lumagraph.ie/">
+        <meta property="og:type" content="website">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Tech Consultancy in Dublin | Data Management & AI Solutions - Lumagraph">
+        <meta name="twitter:description" content="Enhance your business with our tailored AI solutions and expert data strategies. Contact us today!">
+        <meta name="twitter:image" content="{{asset('images/lumagraph.svg') }}">
+        <meta name="robots" content="index, follow">
+        <meta http-equiv="Content-Language" content="en-IE">
 
         <title>@yield('title', 'Lumagraph')</title>
 
@@ -18,7 +32,7 @@
             "@type": "Organization",
             "name": "Your Company Name",
             "url": "https://lumagraph.ie",
-            "logo": "https://lumagraph.ie/{{asset('images/lumagraph.svg') }}",
+            "logo": "{{asset('images/lumagraph.svg') }}",
             "description": "We are a tech consultancy firm based in Dublin, Ireland, specialising in data management and artificial intelligence solutions for B2B clients.",
             "address": {
                 "@type": "PostalAddress",
