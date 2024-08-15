@@ -17,7 +17,6 @@
         <meta name="twitter:description" content="Enhance your business with our tailored AI solutions and expert data strategies. Contact us today!">
         <meta name="twitter:image" content="{{asset('images/lumagraph.svg') }}">
         <meta name="robots" content="index, follow">
-        <meta http-equiv="Content-Language" content="en-IE">
 
         <title>@yield('title', 'Lumagraph')</title>
 

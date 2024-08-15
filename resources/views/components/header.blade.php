@@ -20,7 +20,7 @@
                     </span>
                 </div>
                 <div class="items-center justify-between hidden w-full lg:flex lg:w-auto lg:order-1" id="mobile-menu-2">
-                    <ul class="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
+                    <ul class="flex mb-2 flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
                         <li>
                             <a href="{{ route('home') }}" class="block py-2 pl-3 pr-4 text-white bg-blue-800 rounded lg:bg-transparent lg:text-blue-800 lg:p-0 dark:text-white" aria-current="page">Home</a>
                         </li>
