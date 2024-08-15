@@ -13,7 +13,7 @@ class ContactFormTest extends TestCase
     use RefreshDatabase;
 
     /** @test */
-    public function it_stores_contact_form_data_in_database_and_sends_email()
+    public function it_stores_contact_form_data_in_database()
     {
         // Fake the mail sending
         Mail::fake();
@@ -37,6 +37,24 @@ class ContactFormTest extends TestCase
             'message' => 'This is a test message.',
         ]);
 
+        $response->assertRedirect()
+             ->assertSessionHas('success', 'Your message has been stored successfully!');
+
+    }
+
+    public function it_sends_email()
+    {
+        // Data to be submitted
+        $formData = [
+            'name' => 'John Doe',
+            'email' => 'john@example.com',
+            'phone' => '1234567890',
+            'textarea' => 'This is a test message.',
+        ];
+
+        // Submit the form
+        $response = $this->post(route('contact.submit'), $formData);
+
         // Assert an email was sent
         Mail::assertSent(ContactFormMail::class, function ($mail) use ($formData) {
             return $mail->hasTo('your-email@example.com') &&
@@ -48,7 +66,7 @@ class ContactFormTest extends TestCase
 
         // Assert the response redirects back with a success message
         $response->assertRedirect()
-                 ->assertSessionHas('success', 'Your message has been sent and stored successfully!');
+                 ->assertSessionHas('success', 'Your message has been sent successfully!');
     }
 
     /** @test */
@@ -67,6 +85,7 @@ class ContactFormTest extends TestCase
             'name' => 'Jane Doe',
             'email' => 'jane@example.com',
             'phone' => '0987654321',
+            'textarea' => 'This is another test message.',
            
         ];
 
