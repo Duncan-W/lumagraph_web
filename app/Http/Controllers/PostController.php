@@ -17,6 +17,15 @@ class PostController extends Controller
     }
 
     /**
+     * How to handle the home page (display most recent blog post).
+     */
+    public function home()
+    {
+        $latestPost = Post::latest()->first(); // Fetch the most recent post
+        return view('home', compact('latestPost')); // Pass the post to the 'home' view
+    }
+
+    /**
      * Show the form for creating a new resource.
      */
     public function create()

@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Contact;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\ContactFormMail;
+use Illuminate\Support\Facades\Log;
 
 class ContactController extends Controller
 {
@@ -19,19 +20,27 @@ class ContactController extends Controller
             'textarea' => 'required|string|max:1000',
         ]);
 
-        // Save the data in the database
-        Contact::create([
-            'name' => $validatedData['name'],
-            'email' => $validatedData['email'],
-            'phone' => $validatedData['phone'],
-            'message' => $validatedData['textarea'],
-        ]);
+        try {
+            // Save the data in the database
+            Contact::create([
+                'name' => $validatedData['name'],
+                'email' => $validatedData['email'],
+                'phone' => $validatedData['phone'],
+                'message' => $validatedData['textarea'],
+            ]);
 
-        // Optionally, send an email with the form data
-        Mail::to('duncan.wallace@insight-centre.org')->send(new ContactFormMail($validatedData));
+            // Attempt to send the email
+            Mail::to('duncan.wallace@insight-centre.org')->send(new ContactFormMail($validatedData));
 
-        // Return a response, e.g., redirect back with a success message
-        return redirect()->back()->with('success', 'Your message has been sent successfully!');
+            // Return success response
+            return redirect()->back()->with('success', 'Your message has been sent and stored successfully!');
+
+        } catch (\Exception $e) {
+            // Log the error for debugging
+            Log::error('Contact form submission failed: ' . $e->getMessage());
+
+            // Return an error response to the user
+            return redirect()->back()->with('error', 'There was an error processing your request. Please try again later.');
+        }
     }
 }
-

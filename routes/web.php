@@ -19,9 +19,6 @@ use App\Http\Controllers\ContactController;
 
 Route::resource('posts', PostController::class);
 
-Route::post('/contact', [ContactController::class, 'submit']
-)->name('contact.submit');
-
 Route::get('/', function () {
     $latestPost = Post::latest()->first();
     return view('welcome', compact('latestPost'));
@@ -40,4 +37,8 @@ Route::get('/blog', [PostController::class, 'index'])->name('blog');
 Route::get('/contact', function () {
     return view('contact');
 })->name('contact');
+
+
+Route::post('/contact', [ContactController::class, 'submit']
+)->name('contact.submit');
 
