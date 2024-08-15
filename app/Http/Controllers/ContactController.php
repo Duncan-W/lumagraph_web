@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Contact;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\ContactFormMail;
 
@@ -16,6 +17,14 @@ class ContactController extends Controller
             'email' => 'required|email',
             'phone' => 'nullable|string|max:20',
             'textarea' => 'required|string|max:1000',
+        ]);
+
+        // Save the data in the database
+        Contact::create([
+            'name' => $validatedData['name'],
+            'email' => $validatedData['email'],
+            'phone' => $validatedData['phone'],
+            'message' => $validatedData['textarea'],
         ]);
 
         // Optionally, send an email with the form data
