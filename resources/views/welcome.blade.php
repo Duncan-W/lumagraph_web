@@ -57,7 +57,7 @@
             </div>
             <div class="lg:mt-0 lg:col-span-5 lg:flex">
             
-                <video id="myVideo" autoplay> <source src="{{ asset('images/AdobeStock_257066146_Video_HD_Preview.mp4') }}"></video>
+                <video id="myVideo" autoplay> <source src="{{ asset('images/AdobeStock_257066146.mp4') }}"></video>
                 <script>
 
 HTMLVideoElement.prototype.playBackwards = function () {
