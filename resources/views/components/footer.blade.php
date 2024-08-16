@@ -1,5 +1,12 @@
 
+@php
+$privacy = "The Lumagraph team is committed to protecting your privacy and ensuring the security of your data. This privacy statement outlines how we handle user data when you use our Web App.
+We do not collect any user data directly on our servers or database except that which has been voluntarily provided through the contact form. 
 
+Any data we access is only used to provide the services you have requested.
+
+As is standard practice, we record web-server access logs for the requests your browser makes while you use Lumagraph’s website. These logs record your IP address, your browser’s user-agent string, the referring URL, the time of the request, the http request, and the response code and size. We use this information to monitor and analyse how the Lumagraph site is being used. We retain information which is fully anonymous and contains no personally identifying information for up to two years."
+@endphp
 
 
 <footer class="bg-white dark:bg-gray-900">
@@ -43,7 +50,14 @@
                     <h3 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Legal</h3>
                     <ul class="text-gray-500 dark:text-gray-400">
                         <li class="mb-4">
-                            <a href="#" class="hover:underline">Privacy Policy</a>
+                           <x-modal 
+                                modalId="privacyModal" 
+                                title="Privacy Policy" 
+                                buttonText="Privacy Policy"
+                                buttonType="link"
+                                modalContent={{$privacy}}>
+                                
+                            </x-modal>   
                         </li>
                         <li class="mb-4">
                             <a href="#" class="hover:underline">Licensing</a>

@@ -178,8 +178,8 @@ HTMLVideoElement.prototype.playBackwards = function () {
                 <figcaption class="flex items-center justify-center mt-6 space-x-3">
                     <img class="w-6 h-6 rounded-full" src="" alt="profile picture">
                     <div class="flex items-center divide-x-2 divide-gray-500 dark:divide-gray-800">
-                        <div class="pr-3 font-medium text-gray-900 dark:text-white">Micheal Gough</div>
-                        <div class="pl-3 text-sm font-light text-gray-500 dark:text-gray-400">CEO at Google</div>
+                        <div class="pr-3 font-medium text-gray-900 dark:text-white">John Smith</div>
+                        <div class="pl-3 text-sm font-light text-gray-500 dark:text-gray-400">CEO at </div>
                     </div>
                 </figcaption>
             </figure>
