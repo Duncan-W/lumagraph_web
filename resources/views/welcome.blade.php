@@ -200,7 +200,6 @@ HTMLVideoElement.prototype.playBackwards = function () {
     </section>
     <!-- End block -->
   
-    <script src="{{ asset('js/flowbite.js') }}"></script>
 
 
 @endsection
