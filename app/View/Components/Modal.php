@@ -11,6 +11,7 @@ class Modal extends Component
     public $modalId;
     public $title;
     public $buttonText;
+    public $buttonType;
     public $modalContent;
 
     /**
@@ -18,11 +19,12 @@ class Modal extends Component
      *
      * @return void
      */
-    public function __construct($modalId, $title, $buttonText, $modalContent)
+    public function __construct($modalId, $title, $buttonText, $buttonType, $modalContent)
     {
         $this->modalId = $modalId;
         $this->title = $title;
         $this->buttonText = $buttonText;
+        $this->buttonType = $buttonType;
         $this->modalContent = $modalContent;
     }
 

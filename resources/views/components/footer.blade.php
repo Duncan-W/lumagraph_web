@@ -1,9 +1,4 @@
-<x-modal 
-    modalId="userModal" 
-    title="User Information" 
-    buttonText="View User Information"
-    modalContent="beep beep beep">
-</x-modal>
+
 
 
 
@@ -17,7 +12,13 @@
                             <a href="{{ route('team') }}" class=" hover:underline">About</a>
                         </li>
                         <li class="mb-4">
-                            <a href="#" class="hover:underline">Careers</a>
+                            <x-modal 
+                                modalId="careersModal" 
+                                title="Open positions" 
+                                buttonText="Careers"
+                                buttonType="link"
+                                modalContent="No positions currently available">
+                            </x-modal>                            
                         </li>
                         <li class="mb-4">
                             <a href="{{ route('blog') }}" class="hover:underline">Blog</a>

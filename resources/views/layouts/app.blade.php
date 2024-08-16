@@ -26,6 +26,7 @@
         <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
         <link rel="icon" href="{{asset('images/lumagraph.svg') }}" type="image/svg+xml">
         @vite(['resources/css/app.css', 'resources/js/app.js', 'resources/js/menu.js'])
+        
         <script type="application/ld+json">
         {
             "@context": "https://schema.org",
