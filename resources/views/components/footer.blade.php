@@ -5,13 +5,13 @@
                     <h3 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Company</h3>
                     <ul class="text-gray-500 dark:text-gray-400">
                         <li class="mb-4">
-                            <a href="#" class=" hover:underline">About</a>
+                            <a href="{{ route('team') }}" class=" hover:underline">About</a>
                         </li>
                         <li class="mb-4">
                             <a href="#" class="hover:underline">Careers</a>
                         </li>
                         <li class="mb-4">
-                            <a href="#" class="hover:underline">Blog</a>
+                            <a href="{{ route('blog') }}" class="hover:underline">Blog</a>
                         </li>
                 </ul>
                 </div>
@@ -19,13 +19,13 @@
                     <h3 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Help center</h3>
                     <ul class="text-gray-500 dark:text-gray-400">
                         <li class="mb-4">
-                            <a href="#" class="hover:underline">Twitter</a>
+                            <a href="https://x.com/lumagraph_ie" class="hover:underline">Twitter</a>
                         </li>
                         <li class="mb-4">
-                            <a href="#" class="hover:underline">Facebook</a>
+                            <a href="https://www.facebook.com/people/Lumagraph/61564199108040/" class="hover:underline">Facebook</a>
                         </li>
                         <li class="mb-4">
-                            <a href="#" class="hover:underline">Contact Us</a>
+                            <a href="{{ route('contact') }}" class="hover:underline">Contact Us</a>
                         </li>
                     </ul>
                 </div>
