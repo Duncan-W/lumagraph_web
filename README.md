@@ -14,7 +14,7 @@ Ensure you have the following installed on your machine:
 - **Git** (Version Control)
 - **Node.js & NPM** (Optional: for managing frontend assets if applicable)
 - **Database Server** (e.g., MySQL, PostgreSQL, SQLite)
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+
 
 ### 2. Install Dependencies
 
@@ -28,15 +28,11 @@ Laravel is accessible, powerful, and provides tools required for large, robust a
 ### 3. Run Application
 
 - "php artisan serve" in terminal
+- Ensure whatever database server you are using is turned on and able to recieve local traffic
 - navigate to http://localhost:8000 in browser
 
 
 ## Contributing
 
 Thank you for considering contributing to the Lumagraph webapp!
-
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Duncan Wallace via [duncan@lumagraph.ie](mailto:duncan@lumagraph.ie). All security vulnerabilities will be promptly addressed.
 
