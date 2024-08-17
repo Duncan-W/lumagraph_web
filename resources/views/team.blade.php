@@ -9,7 +9,7 @@
   <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6 ">
       <div class="mx-auto max-w-screen-sm text-center mb-8 lg:mb-16">
           <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Our Team</h2>
-          <p class="font-light text-gray-500 lg:mb-16 sm:text-xl dark:text-gray-400">Here at Lumagraph we focus on markets where technology, innovation, and capital can unlock long-term value.</p>
+          <p class="font-light text-gray-500 lg:mb-16 sm:text-xl dark:text-gray-400">Here at Lumagraph  our team and collaborators have wide experience in development and artificial intelligence innovation.</p>
       </div> 
       <div class="grid gap-8 mb-6 lg:mb-16 md:grid-cols-2">
           <div class="items-center bg-gray-50 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700">

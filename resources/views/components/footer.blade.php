@@ -1,7 +1,7 @@
 
 @php
 $privacy = "The Lumagraph team is committed to protecting your privacy and ensuring the security of your data. This privacy statement outlines how we handle user data when you use our Web App.
-We do not collect any user data directly on our servers or database except that which has been voluntarily provided through the contact form. 
+We do not collect any personal user data directly on our servers or database except that which has been voluntarily provided through the contact form. 
 
 Any data we access is only used to provide the services you have requested.
 
