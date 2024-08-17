@@ -3,7 +3,7 @@
 
 ## About Lumagraph
 
-Laravel is a tech consultancy company based in Dublin, Ireland. This repo describes the web app for the company 
+Lumagraph is a tech consultancy company based in Dublin, Ireland. This repo describes the web app for the company 
 
 ### 1. Prerequisites
 
