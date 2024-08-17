@@ -33,7 +33,7 @@ Laravel is accessible, powerful, and provides tools required for large, robust a
 
 ## Contributing
 
-Thank you for considering contributing to the Laravel framework!
+Thank you for considering contributing to the Lumagraph's webapp!
 
 
 ## Security Vulnerabilities
