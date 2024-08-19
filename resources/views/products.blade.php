@@ -215,7 +215,7 @@
                     </div>
                 </div>
                 
-                <p class="mt-10 mb-5 font-light text-gray-500 sm:text-xl dark:text-gray-400">Close consultation at every step of the journey ensure our products are carefully crafted to match your needs.</p>
+                <p class="mt-10 mb-5 font-light text-gray-500 sm:text-xl dark:text-gray-400">Close consultation at every step of the journey ensures our products are carefully crafted to match your needs.</p>
             </div>
                 <!-- Start block -->
             <section class="bg-white dark:bg-gray-900">
