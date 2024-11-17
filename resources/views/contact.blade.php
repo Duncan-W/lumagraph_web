@@ -15,7 +15,7 @@
         <div class="flex items-stretch justify-center">
             <div class="grid md:grid-cols-2">
                 <div class="h-full pr-6">
-                    <p class="mt-3 mb-12 text-lg text-gray-600 dark:text-slate-400">
+                    <p class="mt-3 mb-12 text-lg text-gray-600 darkmode">
                     Please use the contact form below or the provided details to get in touch, and one of our experts will respond as soon as possible.
                     </p>
                     <ul class="mb-6 md:mb-0">
@@ -33,8 +33,8 @@
                             <div class="ml-4 mb-4">
                                 <h3 class="mb-2 text-lg font-medium leading-6 text-gray-900 dark:text-white">Our Address
                                 </h3>
-                                <p class="text-gray-600 dark:text-slate-400">77 Camden Street Lower</p>
-                                <p class="text-gray-600 dark:text-slate-400">Dublin, D02 XE80</p>
+                                <p class="text-gray-600 darkmode">77 Camden Street Lower</p>
+                                <p class="text-gray-600 darkmode">Dublin, D02 XE80</p>
                             </div>
                         </li>
                         <li class="flex">
@@ -52,8 +52,8 @@
                             <div class="ml-4 mb-4">
                                 <h3 class="mb-2 text-lg font-medium leading-6 text-gray-900 dark:text-white">Contact
                                 </h3>
-                                <p class="text-gray-600 dark:text-slate-400">Mobile: +353 (0) 86 406-0347</p>
-                                <p class="text-gray-600 dark:text-slate-400">Mail: russell@lumagraph.ie</p>
+                                <p class="text-gray-600 darkmode">Mobile: +353 (0) 86 406-0347</p>
+                                <p class="text-gray-600 darkmode">Mail: russell@lumagraph.ie</p>
                             </div>
                         </li>
                         <li class="flex">
@@ -68,8 +68,8 @@
                             <div class="ml-4 mb-4">
                                 <h3 class="mb-2 text-lg font-medium leading-6 text-gray-900 dark:text-white">Working
                                     hours</h3>
-                                <p class="text-gray-600 dark:text-slate-400">Monday - Friday: 08:00 - 17:00</p>
-                                <p class="text-gray-600 dark:text-slate-400">Saturday &amp; Sunday: 08:00 - 12:00</p>
+                                <p class="text-gray-600 darkmode">Monday - Friday: 08:00 - 17:00</p>
+                                <p class="text-gray-600 darkmode">Saturday &amp; Sunday: 08:00 - 12:00</p>
                             </div>
                         </li>
                     </ul>
@@ -95,7 +95,7 @@
                             </div>
                         </div>
                         <div class="text-center">
-                            <button type="submit" class="bg-blue-800  px-6 py-3 font-xl rounded-md sm:mb-0 ">Send Message</button>
+                            <button type="submit" class="bg-blue-800  px-6 py-3 font-xl rounded-md sm:mb-0 darkmode">Send Message</button>
                         </div>
                     </form>
                 </div>

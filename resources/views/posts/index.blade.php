@@ -38,7 +38,7 @@
                     alt=""
                 />
                 </div>
-              <h2 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+              <h2 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 ">
                   <a href="{{ route('posts.show', $post->id) }}">{{ $post->title }}</a>
               </h2>
               <p class="mb-5 font-light text-gray-500 dark:text-gray-400">
@@ -50,7 +50,7 @@
               <div class="flex justify-between items-center">
                   <div class="flex items-center space-x-4">
                       <img class="w-7 h-7 rounded-full" src="{{ asset('images/lumagraph.svg') }}" alt="Author avatar" />
-                      <span class="font-medium dark:text-white">
+                      <span class="font-medium ">
                           {{ $post->user->name ?? 'Lumagraph' }} <!-- Need author table, and 1-n link; remember picture -->
                       </span>
                   </div>

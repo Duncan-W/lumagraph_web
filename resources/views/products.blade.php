@@ -75,7 +75,7 @@
             </div>
             <div class="mx-auto mb-8 text-center lg:mb-12">
                 <h2 class="mb-10 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white">Our product lifecycle</h2>
-                <div class="w-full flex items-center justify-center space-x-4 md:flex-row flex-wrap">
+                <div class="w-full flex items-center justify-center space-x-4 md:flex-row flex-wrap darkmode">
                     
                     <div class="text-center">
                         <svg class="w-24 h-24 mx-auto hover:drop-shadow-lg" fill="#000000" version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 

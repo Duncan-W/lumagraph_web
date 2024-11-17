@@ -99,11 +99,11 @@
 
         </script>
         
-
+       
         <!-- Styles -->
         <style>
             body {
-            background-image: url('/images/dublin.jpg'); 
+            background-image:  url(" {{ asset('/images/dublin.jpg') }}"); 
             background-size: cover; 
             background-position: center; 
             background-repeat: no-repeat; 
@@ -114,6 +114,12 @@
             height: 100vh;  
             z-index: -1;  
             background-attachment: fixed;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .darkmode  {
+                filter: invert(1) !important;
+                }
         }
 
         nav {
