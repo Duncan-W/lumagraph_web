@@ -70,7 +70,7 @@
                 </div>
                 <!-- Modal body -->
                 <div class="p-6 space-y-6">
-                    <form id="contactForm" method="post" action="{{ route('contact.submit') }}">
+                    <form id="contactForm" method="post" action="{{ route('auth.login') }}">
                         @csrf
                         <div class="mb-6">
                             <div class="mx-0 mb-1 sm:mb-4">

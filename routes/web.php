@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
 use App\Models\Post;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\AuthController;
 
 
 
@@ -38,7 +39,16 @@ Route::get('/contact', function () {
     return view('contact');
 })->name('contact');
 
+Route::middleware(['auth'])->group(function () {
+    Route::get('/dashboard', function () {
+        return view('dashboard');
+    })->name('dashboard');
+});
 
 Route::post('/contact', [ContactController::class, 'submit']
 )->name('contact.submit');
+
+Route::post('/login', [AuthController::class, 'login']
+)->name('auth.login');
+
 

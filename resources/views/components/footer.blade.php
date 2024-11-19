@@ -19,6 +19,9 @@ As is standard practice, we record web-server access logs for the requests your 
                             <a href="{{ route('team') }}" class=" hover:underline">About</a>
                         </li>
                         <li class="mb-4">
+                            <a href="{{ route('blog') }}" class="hover:underline">Blog</a>
+                        </li>
+                        <li class="mb-4">
                             <x-modal 
                                 modalId="careersModal" 
                                 title="Open positions" 
@@ -27,19 +30,19 @@ As is standard practice, we record web-server access logs for the requests your 
                                 modalContent="No positions currently available">
                             </x-modal>                            
                         </li>
-                        <li class="mb-4">
-                            <a href="{{ route('blog') }}" class="hover:underline">Blog</a>
-                        </li>
                 </ul>
                 </div>
                 <div>
-                    <h3 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Help center</h3>
+                    <h3 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Social</h3>
                     <ul class="text-gray-500 dark:text-gray-400">
                         <li class="mb-4">
                             <a href="https://x.com/lumagraph_ie" class="hover:underline">Twitter</a>
                         </li>
                         <li class="mb-4">
                             <a href="https://www.facebook.com/people/Lumagraph/61564199108040/" class="hover:underline">Facebook</a>
+                        </li>
+                        <li class="mb-4">
+                            <a href="https://www.linkedin.com/company/lumagraph/" class="hover:underline">LinkedIn</a>
                         </li>
                         <li class="mb-4">
                             <a href="{{ route('contact') }}" class="hover:underline">Contact Us</a>
