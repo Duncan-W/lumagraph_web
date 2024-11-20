@@ -18,12 +18,23 @@ use App\Http\Controllers\AuthController;
 |
 */
 
+
+/* Blog post reroutes */
+
+Route::redirect('/undefined-behavior', '/posts/2');
+// Synonym route
+
+
 Route::resource('posts', PostController::class);
+
+/* Home page + capacity to display most recent blog post */
 
 Route::get('/', function () {
     $latestPost = Post::latest()->first();
     return view('welcome', compact('latestPost'));
 })->name('home');
+
+/* Main pages */
 
 Route::get('/products', function () {
     return view('products');
@@ -38,6 +49,8 @@ Route::get('/blog', [PostController::class, 'index'])->name('blog');
 Route::get('/contact', function () {
     return view('contact');
 })->name('contact');
+
+/* Login and form handling */
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/dashboard', function () {
