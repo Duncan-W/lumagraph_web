@@ -21,7 +21,7 @@ use App\Http\Controllers\AuthController;
 
 /* Blog post reroutes */
 
-Route::redirect('/undefined-behavior', '/posts/2');
+Route::redirect('/undefined-behavior', '/posts/undefined-behavior');
 // Synonym route
 
 
