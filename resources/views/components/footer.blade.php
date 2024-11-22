@@ -39,9 +39,6 @@ As is standard practice, we record web-server access logs for the requests your 
                             <a href="https://x.com/lumagraph_ie" class="hover:underline">Twitter</a>
                         </li>
                         <li class="mb-4">
-                            <a href="https://www.facebook.com/people/Lumagraph/61564199108040/" class="hover:underline">Facebook</a>
-                        </li>
-                        <li class="mb-4">
                             <a href="https://www.linkedin.com/company/lumagraph/" class="hover:underline">LinkedIn</a>
                         </li>
                         <li class="mb-4">

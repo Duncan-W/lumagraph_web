@@ -120,6 +120,17 @@
             .darkmode  {
                 filter: invert(1) !important;
                 }
+
+                .prose :not(img) {
+                    color:white;
+                }
+
+        }
+
+        @media (max-width: 640px) { 
+            .prose{
+                padding: 2px 20px !important;
+            }
         }
 
         nav {
