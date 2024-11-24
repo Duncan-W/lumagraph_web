@@ -17,7 +17,8 @@
     <h1>{{ $post->title }}</h1>
 
     <div style="height: 1vh;"></div>
-    <!-- Start block -->                
+    <!-- Start block -->
+               
 
     <div style="height: 5vw;"></div>
     <section class="bg-gray-50 dark:bg-gray-900">
@@ -53,7 +54,7 @@
             // Replace all backslashes in the body content
             document.body.innerHTML = document.body.innerHTML.replace(/\\/g, '');
             const paragraphs = document.querySelectorAll("p");
-    
+
             // Iterate over paragraphs
             paragraphs.forEach(paragraph => {
                 // Check if the paragraph's text content contains "Caption:"
@@ -64,6 +65,7 @@
                     paragraph.textContent = paragraph.textContent.replace("Caption:", "").trim();
                 }
             });
+    
         });
     </script>
 @endsection

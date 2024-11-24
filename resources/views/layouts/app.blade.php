@@ -26,78 +26,121 @@
         <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
         <link rel="icon" href="{{asset('images/lumagraph.svg') }}" type="image/svg+xml">
         @vite(['resources/css/app.css', 'resources/js/app.js', 'resources/js/menu.js'])
-        
-        <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
+
+        @php
+use Illuminate\Support\Str;
+use Illuminate\Support\Facades\App;
+
+// Convert Markdown to plain text and extract the first paragraph
+$description = Str::of(strip_tags(App::make(\Illuminate\Support\Str::class)->markdown($post->body)))
+    ->explode("\n")
+    ->filter(fn($line) => !empty(trim($line))) // Remove empty lines
+    ->first();
+@endphp
+
+        @if (request()->routeIs('posts.show') && isset($post))
+    {{-- Blog-specific JSON-LD for individual blog posts --}}
+
+
+
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "{{ $post->title }}",
+        "description": "{{ $description }}",
+        "author": {
+            "@type": "Person",
+            "name": "{{ $post->user_id }}"
+        },
+        "datePublished": "{{ $post->created_at->toIso8601String() }}",
+        "dateModified": "{{ $post->updated_at->toIso8601String() }}",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "{{ url()->current() }}"
+        },
+        "publisher": {
             "@type": "Organization",
-            "name": "Your Company Name",
-            "url": "https://lumagraph.ie",
-            "logo": "{{asset('images/lumagraph.svg') }}",
-            "description": "We are a tech consultancy firm based in Dublin, Ireland, specialising in data management and artificial intelligence solutions for B2B clients.",
-            "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "77 Camden Street Lower",
-                "addressLocality": "Dublin",
-                "addressRegion": "D",
-                "postalCode": "D02",
-                "addressCountry": "IE"
-            },
-            "contactPoint": {
-                "@type": "ContactPoint",
-                "telephone": "+353-0-86-406-0347",
-                "contactType": "Customer Support",
-                "areaServed": "IE",
-                "availableLanguage": ["English"]
-            },
-            "sameAs": [
-                
-                "https://x.com/lumagraph_ie"
-                
-            ],
-            "foundingDate": "2024",
-            "founders": [
-                {
+            "name": "Lumagraph",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "{{ asset('images/lumagraph.svg') }}"
+            }
+        }
+    }
+    </script>
+@else
+    {{-- Default JSON-LD for non-blog pages --}}
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Lumagraph",
+        "url": "https://lumagraph.ie",
+        "logo": "{{ asset('images/lumagraph.svg') }}",
+        "description": "We are a tech consultancy firm based in Dublin, Ireland, specialising in data management and artificial intelligence solutions for B2B clients.",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "77 Camden Street Lower",
+            "addressLocality": "Dublin",
+            "addressRegion": "D",
+            "postalCode": "D02",
+            "addressCountry": "IE"
+        },
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+353-0-86-406-0347",
+            "contactType": "Customer Support",
+            "areaServed": "IE",
+            "availableLanguage": ["English"]
+        },
+        "sameAs": [
+            "https://x.com/lumagraph_ie"
+        ],
+        "foundingDate": "2024",
+        "founders": [
+            {
                 "@type": "Person",
                 "name": "Russell Wallace"
-                }
-            ],
-            "service": [
-                {
+            }
+        ],
+        "service": [
+            {
                 "@type": "Service",
                 "name": "Data Management",
                 "description": "Comprehensive data management services, including data architecture, integration, and governance."
-                },
-                {
+            },
+            {
                 "@type": "Service",
                 "name": "Artificial Intelligence Solutions",
                 "description": "Custom AI solutions tailored to your business needs, including machine learning, predictive analytics, and more."
-                }
-            ],
-            "areaServed": "IE",
-            "hasOfferCatalog": {
-                "@type": "OfferCatalog",
-                "name": "Tech Consultancy Services",
-                "itemListElement": [
+            }
+        ],
+        "areaServed": "IE",
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Tech Consultancy Services",
+            "itemListElement": [
                 {
                     "@type": "Offer",
                     "itemOffered": {
-                    "@type": "Service",
-                    "name": "Data Management Consulting"
+                        "@type": "Service",
+                        "name": "Data Management Consulting"
                     }
                 },
                 {
-                    "@type": "Offer",
-                    "itemOffered": {
                     "@type": "Service",
                     "name": "AI Strategy Consulting"
                     }
-                }
                 ]
             }
         }
+    }
+    </script>
+@endif
 
-        </script>
+
         
        
         <!-- Styles -->
@@ -131,6 +174,14 @@
             .prose{
                 padding: 2px 20px !important;
             }
+        }
+
+        code::before {
+            content: ' ' !important;
+        }
+
+        code::after {
+            content: '' !important;
         }
 
         nav {
