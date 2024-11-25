@@ -1,14 +1,14 @@
 @extends('layouts.app')
 @section('content')
 
-@php
+@php            // this code is repeated in index.blade and should be amalgamated at some point
                 // Assuming $post->image contains the relative path to the image, e.g., 'images/posts/image1.jpg'
-                $imagePath = 'images/posts/' . $post->image;
+                $imagePath = 'images/blog/' . $post->image;
                 // default image
                 $imageUrl = 'https://images.unsplash.com/photo-1682407186023-12c70a4a35e0?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=2832&amp;q=80';
 
                 // Check if the image file exists in the public directory
-                if (File::exists(public_path($imagePath))) {
+                if ($post->image && File::exists(public_path($imagePath))) {
                     $imageUrl = asset($imagePath);
                 }
                

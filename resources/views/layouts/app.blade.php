@@ -41,6 +41,12 @@
 
                 // Handle null for dateModified
                 $dateModified = $post->updated_at ? $post->updated_at->toIso8601String() : null;
+
+                // Retrieve author name
+                $authorName = $post->user->name ?? 'Unknown Author';
+
+                // Handle image conditionally
+                $imageUrl = $post->image ? asset('storage/' . $post->image) : null;
             @endphp
 
             {{-- Blog-specific JSON-LD for individual blog posts --}}
@@ -52,11 +58,17 @@
                 "description": "{{ $description }}",
                 "author": {
                     "@type": "Person",
-                    "name": "{{ $post->user_id }}"
+                    "name": "{{ $authorName }}"
                 },
                 "datePublished": "{{ $post->created_at->toIso8601String() }}",
                 @if ($dateModified)
                 "dateModified": "{{ $dateModified }}",
+                @endif
+                @if ($imageUrl)
+                "image": {
+                    "@type": "ImageObject",
+                    "url": "{{ $imageUrl }}"
+                },
                 @endif
                 "mainEntityOfPage": {
                     "@type": "WebPage",
