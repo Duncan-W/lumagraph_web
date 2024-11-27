@@ -1,11 +1,12 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\PostController;
 use App\Models\Post;
+use App\Http\Controllers\PostController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\SitemapController; 
 
 
 
@@ -18,6 +19,10 @@ use App\Http\Controllers\DashboardController;
 | assigned to the "web" middleware group.
 |
 */
+
+/* Sitemap generator */
+
+Route::get('/sitemap.xml', [SitemapController::class, 'index']);
 
 
 /* Blog post reroutes */

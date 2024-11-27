@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://lumagraph.ie/sitemap.xml
