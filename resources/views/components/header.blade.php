@@ -45,7 +45,13 @@
                             </button>
                         </li>
                     </ul>
-                    <button id="toggleButton" style="margin:-6px;" class="hidden absolute bottom-1 left-1/2 transform -translate-x-1/2 w-1/5" aria-hidden="true">
+                    <button 
+                        id="toggleButton" 
+                        style="margin:-6px;" 
+                        class="hidden absolute bottom-1 left-1/2 transform -translate-x-1/2 w-1/5" 
+                        aria-hidden="false" 
+                        aria-label="Toggle navigation menu"
+                    >
                         <span style="display:block" class="h-0.5 m-2 bg-black"></span>
                     </button>
                 </div>
@@ -74,21 +80,57 @@
                         @csrf
                         <div class="mb-6">
                             <div class="mx-0 mb-1 sm:mb-4">
-
+                                <!-- Username Input -->
                                 <div class="mx-0 mb-1 sm:mb-4">
-                                    <label for="email" class="pb-1 text-xs uppercase tracking-wider"></label><input type="email" id="username" name="username" autocomplete="email" required placeholder="Username" class="mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md dark:text-gray-300 sm:mb-0">
+                                    <label for="username" class="pb-1 text-xs uppercase tracking-wider">
+                                        Username
+                                    </label>
+                                    <input 
+                                        type="email" 
+                                        id="username" 
+                                        name="username" 
+                                        autocomplete="email" 
+                                        required 
+                                        placeholder="Enter your username" 
+                                        class="mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md dark:text-gray-300 sm:mb-0"
+                                        aria-required="true" 
+                                        aria-label="Enter your username"
+                                    >
                                 </div>
+                                <!-- Password Input -->
                                 <div class="mx-0 mb-1 sm:mb-4">
-                                    <label for="password" class="pb-1 text-xs uppercase tracking-wider"></label><input type="password" id="password" name="password" autocomplete="password" required placeholder="Password" class="mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md dark:text-gray-300 sm:mb-0">
+                                    <label for="password" class="pb-1 text-xs uppercase tracking-wider">
+                                        Password
+                                    </label>
+                                    <input 
+                                        type="password" 
+                                        id="password" 
+                                        name="password" 
+                                        autocomplete="current-password" 
+                                        required 
+                                        placeholder="Enter your password" 
+                                        class="mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md dark:text-gray-300 sm:mb-0"
+                                        aria-required="true" 
+                                        aria-label="Enter your password"
+                                    >
                                 </div>
                             </div>
                         </div>
+                        <!-- Submit Button -->
                         <div class="flex items-center justify-center">
-                            <div class="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800">
-                                <button type="submit" class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">Login</button>
+                            <div 
+                                class="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800"
+                                role="button"
+                                aria-label="Submit login form"
+                            >
+                                <button 
+                                    type="submit" 
+                                    class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0"
+                                >
+                                    Login
+                                </button>
                             </div>
                         </div>
-
                     </form>
                    
                 </div>

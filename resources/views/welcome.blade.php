@@ -133,7 +133,7 @@ HTMLVideoElement.prototype.playBackwards = function () {
             </div>
             <!-- Row -->
             <div class="items-center gap-8 lg:grid lg:grid-cols-2 xl:gap-16">
-                <img class="hidden w-full mb-4 rounded-lg lg:mb-0 lg:flex" src="{{ asset('images/Web_UI.png') }}" alt="feature image 2">
+                <img class="hidden w-full mb-4 rounded-lg lg:mb-0 lg:flex" src="{{ asset('images/Web_UI.png') }}" alt="">
                 <div class="text-gray-500 sm:text-lg dark:text-gray-400">
                     <h2 class="mb-4 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white">Consultancy options to suit you</h2>
                     <p class="mb-8 font-light lg:text-xl">Streamline your business operations. Explore options to supercharge your efficiency with transparent pricing and demonstrable ROI.</p>
