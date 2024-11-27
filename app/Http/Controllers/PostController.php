@@ -39,6 +39,7 @@ class PostController extends Controller
     public function store(Request $request)
     {
         $request->validate([
+            'id' => 'required|string|unique:posts,id', // Ensure the ID is a unique string
             'title' => 'required',
             'body' => 'required',
         ]);
@@ -50,29 +51,32 @@ class PostController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Post $post)
+    public function show($id)
     {
+        $post = Post::findOrFail($id); // Fetch the post by its ID
         return view('posts.show', compact('post'));
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-     public function edit(Post $post)
-     {
-         return view('posts.edit', compact('post'));
-     }
+    public function edit($id)
+    {
+        $post = Post::findOrFail($id); // Fetch the post by its ID
+        return view('posts.edit', compact('post'));
+    }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Post $post)
+    public function update(Request $request, $id)
     {
         $request->validate([
             'title' => 'required',
             'body' => 'required',
         ]);
 
+        $post = Post::findOrFail($id);
         $post->update($request->all());
         return redirect()->route('posts.index')->with('success', 'Post updated successfully.');
     }
@@ -80,8 +84,9 @@ class PostController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Post $post)
+    public function destroy($id)
     {
+        $post = Post::findOrFail($id);
         $post->delete();
         return redirect()->route('posts.index')->with('success', 'Post deleted successfully.');
     }

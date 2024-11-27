@@ -5,6 +5,7 @@ use App\Http\Controllers\PostController;
 use App\Models\Post;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\DashboardController;
 
 
 
@@ -53,9 +54,7 @@ Route::get('/contact', function () {
 /* Login and form handling */
 
 Route::middleware(['auth'])->group(function () {
-    Route::get('/dashboard', function () {
-        return view('dashboard');
-    })->name('dashboard');
+    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 });
 
 Route::post('/contact', [ContactController::class, 'submit']
