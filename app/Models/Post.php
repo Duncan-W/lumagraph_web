@@ -11,7 +11,7 @@ class Post extends Model
     protected $keyType = 'string';
     public $incrementing = false;
 
-    protected $fillable = ['title', 'body', 'image', 'created_at', 'updated_at', 'user_id', 'post_type_id'];
+    protected $fillable = ['id', 'title', 'body', 'image', 'created_at', 'updated_at', 'user_id', 'post_type_id'];
     public function user()
     {
         return $this->belongsTo(User::class);
