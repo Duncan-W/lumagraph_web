@@ -20,33 +20,51 @@
                     </span>
                 </div>
                 <div class="items-center justify-between hidden w-full lg:flex lg:w-auto lg:order-1" id="mobile-menu-2">
-                    <ul class="flex mb-2 flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
-                        <li>
-                            <a href="{{ route('home') }}" class="block py-2 pl-3 pr-4 text-white bg-blue-800 rounded lg:bg-transparent lg:text-blue-800 lg:p-0 dark:text-white" aria-current="page">Home</a>
-                        </li>
-                        <!-- <li>
-                            <a href="#" class="block py-2 pl-3 pr-4 text-gray-800 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-800 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-800 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-800">Company</a>
-                        </li> -->
-                        <li>
-                            <a href="{{ route('products') }}" class="block py-2 pl-3 pr-4 text-gray-800 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-800 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-800 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-800">Products</a>
-                        </li>
-                        <li>
-                            <a href="{{ route('team') }}" class="block py-2 pl-3 pr-4 text-gray-800 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-800 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-800 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-800">Team</a>
-                        </li>
-                        <li>
-                            <a href="{{ route('blog') }}" class="block py-2 pl-3 pr-4 text-gray-800 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-800 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-800 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-800">Blog</a>
-                        </li>
-                        <li>
-                            <a href="{{ route('contact') }}" class="block py-2 pl-3 pr-4 text-gray-800 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-800 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-800 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-800">Contact</a>
-                        </li>
-                        <li class="block py-2 pl-3 pr-4 text-gray-800 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-800 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-800 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-800">
-                            <button data-modal-toggle="loginModal" id="loginButton" aria-label="user login" >
-                                Login
-                            </button>
-                        </li>
-                    </ul>
+                <ul class="flex mb-2 flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
+                    <li>
+                        <a href="{{ route('home') }}" 
+                        class="block py-2 pl-3 pr-4 rounded {{ request()->routeIs('home') ? 'text-white bg-blue-800 lg:bg-transparent lg:text-blue-800 lg:p-0 dark:text-white' : 'text-gray-800 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-800 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-800 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-800' }}" 
+                        {{ request()->routeIs('home') ? 'aria-current="page"' : '' }}>
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ route('products') }}" 
+                        class="block py-2 pl-3 pr-4 rounded {{ request()->routeIs('products') ? 'text-white bg-blue-800 lg:bg-transparent lg:text-blue-800 lg:p-0 dark:text-white' : 'text-gray-800 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-800 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-800 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-800' }}" 
+                        {{ request()->routeIs('products') ? 'aria-current="page"' : '' }}>
+                            Products
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ route('team') }}" 
+                        class="block py-2 pl-3 pr-4 rounded {{ request()->routeIs('team') ? 'text-white bg-blue-800 lg:bg-transparent lg:text-blue-800 lg:p-0 dark:text-white' : 'text-gray-800 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-800 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-800 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-800' }}" 
+                        {{ request()->routeIs('team') ? 'aria-current="page"' : '' }}>
+                            Team
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ route('blog') }}" 
+                        class="block py-2 pl-3 pr-4 rounded {{ request()->routeIs('blog') ? 'text-white bg-blue-800 lg:bg-transparent lg:text-blue-800 lg:p-0 dark:text-white' : 'text-gray-800 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-800 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-800 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-800' }}" 
+                        {{ request()->routeIs('blog') ? 'aria-current="page"' : '' }}>
+                            Blog
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ route('contact') }}" 
+                        class="block py-2 pl-3 pr-4 rounded {{ request()->routeIs('contact') ? 'text-white bg-blue-800 lg:bg-transparent lg:text-blue-800 lg:p-0 dark:text-white' : 'text-gray-800 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-800 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-800 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-800' }}" 
+                        {{ request()->routeIs('contact') ? 'aria-current="page"' : '' }}>
+                            Contact
+                        </a>
+                    </li>
+                    <li class="block py-2 pl-3 pr-4 text-gray-800 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-800 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-800 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-800">
+                        <button data-modal-toggle="loginModal" id="loginButton" aria-label="user login" >
+                            Login
+                        </button>
+                    </li>
+                </ul>
+
                     <button 
-                        id="toggleButton" 
+                    id="toggleButton" 
                         style="margin:-6px;" 
                         class="hidden absolute bottom-1 left-1/2 transform -translate-x-1/2 w-1/5" 
                         aria-hidden="false" 
