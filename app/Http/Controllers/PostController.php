@@ -17,7 +17,7 @@ class PostController extends Controller
     }
 
     /**
-     * How to handle the home page (display most recent blog post).
+     * Handle the home page (display most recent blog post).
      */
     public function home()
     {
@@ -44,7 +44,16 @@ class PostController extends Controller
             'body' => 'required',
         ]);
 
-        Post::create($request->all());
+        // Process the body field to replace incorrect backticks with correct Markdown
+        $processedBody = str_replace('\`\`\`', '```', $request->input('body'));
+
+        // Create the post with the processed body
+        Post::create([
+            'id' => $request->input('id'),
+            'title' => $request->input('title'),
+            'body' => $processedBody,
+        ]);
+
         return redirect()->route('posts.index')->with('success', 'Post created successfully.');
     }
 
@@ -76,8 +85,15 @@ class PostController extends Controller
             'body' => 'required',
         ]);
 
+        // Find the post and update it with the processed body
         $post = Post::findOrFail($id);
-        $post->update($request->all());
+        $processedBody = str_replace('\`\`\`', '```', $request->input('body'));
+
+        $post->update([
+            'title' => $request->input('title'),
+            'body' => $processedBody,
+        ]);
+
         return redirect()->route('posts.index')->with('success', 'Post updated successfully.');
     }
 

@@ -41,7 +41,23 @@
                 },
                 $html
             );
+
+            // Modify src attributes of images with relative paths
+            $html = preg_replace_callback(
+                '/<img[^>]+src=["\']([^"\':]+)["\'][^>]*>/i',
+                function ($matches) {
+                    $src = $matches[1]; // Extract the src value
+                    // Check if the src is relative (doesn't contain a protocol or domain)
+                    if (!preg_match('/^(https?:|\/\/)/', $src)) {
+                        $src = 'images/blog/' . ltrim($src, '/'); // Prepend the path
+                    }
+                    // Reconstruct the img tag with the modified src
+                    return str_replace($matches[1], $src, $matches[0]);
+                },
+                $html
+            );
         @endphp
+
 
         <article class="prose sm:px-prosePadding" style="margin:auto">
             {!! $html !!}
@@ -49,23 +65,65 @@
 
         <a href="{{ route('blog') }}" class="block ml-2 py-2 pl-3 pr-4 text-gray-800 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-800 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-800 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-800">Back to posts</a>
     </section>
-    <script>
-        window.addEventListener("load", function () {
-            // Replace all backslashes in the body content
-            document.body.innerHTML = document.body.innerHTML.replace(/\\/g, '');
-            const paragraphs = document.querySelectorAll("p");
+    <script defer>
+    document.addEventListener("DOMContentLoaded", (event) => {
+        // Replace all backslashes in the body content
+        document.body.innerHTML = document.body.innerHTML.replace(/\\/g, '');
+        const paragraphs = Array.from(document.querySelectorAll("p"));
 
-            // Iterate over paragraphs
-            paragraphs.forEach(paragraph => {
-                // Check if the paragraph's text content contains "Caption:"
-                if (paragraph.textContent.includes("Caption:")) {
-                    // Add the desired classes
-                    paragraph.classList.add("text-xs", "text-gray-800");
-                    // Remove only the substring "Caption:" while keeping the rest of the content
-                    paragraph.textContent = paragraph.textContent.replace("Caption:", "").trim();
+        let isInTable = false; // Track whether we are between TableBegin:: and TableEnd::
+        let tableParagraphs = []; // Store paragraphs within the TableBegin:: TableEnd:: block
+        let iconOffset = 2; // Vertical offset in em units for icon images
+
+        paragraphs.forEach((paragraph) => {
+            if (paragraph.textContent.includes("TableBegin::")) {
+                isInTable = true;
+                paragraph.textContent = ""; // Remove the "TableBegin::" text from display
+                return;
+            }
+
+            if (paragraph.textContent.includes("TableEnd::")) {
+                isInTable = false;
+                paragraph.textContent = ""; // Remove the "TableEnd::" text from display
+                return;
+            }
+
+            if (isInTable) {
+                // Check for images with alt text containing "icon"
+                const iconImage = paragraph.querySelector("img[alt*='icon']");
+                if (iconImage) {
+                    // Remove the paragraph containing the image from normal flow
+                    iconImage.style.width = "20px";
+                    iconImage.style.position = "relative";
+                    iconImage.style.left = "-50px"; // Position to the left of table paragraphs
+                    iconImage.style.top = `${iconOffset * 30}px`; // Offset vertically, 5px higher
+                    //iconImage.alt = ""; // Remove alt text
+                } else {
+                    // Add class "pl-10" to paragraphs in the table block
+                    paragraph.classList.add("pl-10");
+
+                    // If the paragraph contains "Speaker::", add "font-bold" class
+                    if (paragraph.textContent.includes("Speaker::")) {
+                        paragraph.classList.add("font-bold");
+                        paragraph.textContent = paragraph.textContent.replace("Speaker::", "").trim();
+                    }
+
+                    tableParagraphs.push(paragraph); // Track the paragraph for positioning
                 }
-            });
-    
+            }
+
+            // Handle "Caption:" outside of TableBegin:: TableEnd::
+            if (paragraph.textContent.includes("Caption:")) {
+                paragraph.classList.add("text-xs", "text-gray-800");
+                paragraph.textContent = paragraph.textContent.replace("Caption:", "").trim();
+            }
         });
-    </script>
+
+        // Minimize reflows and jumps by batching style changes
+        document.body.style.visibility = "visible"; // Ensure everything renders at once
+    });
+</script>
+
+
+
 @endsection
