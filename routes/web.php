@@ -25,10 +25,14 @@ use App\Http\Controllers\SitemapController;
 Route::get('/sitemap.xml', [SitemapController::class, 'index']);
 
 
-/* Blog post reroutes */
+/* Google console reroutes */
 
 Route::redirect('/undefined-behavior', '/posts/undefined-behavior');
-// Synonym route
+Route::redirect('/public/posts/1', '/posts/undefined-behavior');
+Route::redirect('/index.php/feed', '/blog');
+Route::redirect('/about', '/products');
+
+
 
 
 Route::resource('posts', PostController::class);
