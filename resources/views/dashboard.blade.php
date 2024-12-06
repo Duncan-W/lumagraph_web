@@ -21,7 +21,7 @@
             @csrf
             <div class="mb-3">
                         <label for="postId" class="block text-gray-700 font-bold mb-2">Post ID/URL</label>
-                        <input type="text" id="postId" name="id" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="URL encoded title" required readonly disabled>
+                        <input type="text" id="postId" name="id" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="URL encoded title" required readonly>
             </div>
             <div class="mb-4">
                 <label for="title" class="block text-gray-700 font-bold mb-2">Title</label>
@@ -114,7 +114,7 @@
                 postIdInput.value = postIdValue;
             });
         });
-</script>
+    </script>
 
 
 @endsection

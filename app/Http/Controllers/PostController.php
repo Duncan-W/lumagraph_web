@@ -12,9 +12,12 @@ class PostController extends Controller
      */
     public function index()
     {
-        $posts = Post::with('user')->get();
+        // Order posts by created_at in descending order (most recent first)
+        $posts = Post::with('user')->orderBy('created_at', 'desc')->get();
+    
         return view('posts.index', compact('posts'));
     }
+    
 
     /**
      * Handle the home page (display most recent blog post).
