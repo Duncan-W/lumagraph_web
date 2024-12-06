@@ -21,7 +21,7 @@
             @csrf
             <div class="mb-3">
                         <label for="postId" class="block text-gray-700 font-bold mb-2">Post ID/URL</label>
-                        <input type="text" id="postId" name="id" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Enter Post ID" required>
+                        <input type="text" id="postId" name="id" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="URL encoded title" required readonly disabled>
             </div>
             <div class="mb-4">
                 <label for="title" class="block text-gray-700 font-bold mb-2">Title</label>
@@ -93,6 +93,28 @@
     </div>
 
 </div>
+<script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const titleInput = document.getElementById('title');
+            const postIdInput = document.getElementById('postId');
+
+            titleInput.addEventListener('input', function () {
+                let titleValue = titleInput.value.trim();
+
+                // Convert to lowercase
+                let postIdValue = titleValue.toLowerCase();
+
+                // Replace spaces with dashes
+                postIdValue = postIdValue.replace(/\s+/g, '-');
+
+                // Encode special characters for URLs
+                postIdValue = encodeURIComponent(postIdValue);
+
+                // Set the postId input value
+                postIdInput.value = postIdValue;
+            });
+        });
+</script>
 
 
 @endsection

@@ -1,4 +1,0 @@
-this directory shouldn't be used any more. Use public/posts instead for blog media 
-
-
-This directory should be deleted, but there's an absolute address to 102685442.03.01.lg which needs to be handled first

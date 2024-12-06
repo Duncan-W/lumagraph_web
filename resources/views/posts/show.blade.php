@@ -42,21 +42,37 @@
                 $html
             );
 
-            // Modify src attributes of images with relative paths
+            // Modify src attributes of images with relative paths to use the asset helper
             $html = preg_replace_callback(
                 '/<img[^>]+src=["\']([^"\':]+)["\'][^>]*>/i',
                 function ($matches) {
                     $src = $matches[1]; // Extract the src value
                     // Check if the src is relative (doesn't contain a protocol or domain)
                     if (!preg_match('/^(https?:|\/\/)/', $src)) {
-                        $src = 'images/blog/' . ltrim($src, '/'); // Prepend the path
+                        $src = asset('images/blog/' . ltrim($src, '/')); // Use asset helper for images
                     }
                     // Reconstruct the img tag with the modified src
                     return str_replace($matches[1], $src, $matches[0]);
                 },
                 $html
             );
+
+            // Modify src attributes of videos with relative paths to use the asset helper
+            $html = preg_replace_callback(
+                '/<video[^>]+src=["\']([^"\':]+)["\'][^>]*>/i',
+                function ($matches) {
+                    $src = $matches[1]; // Extract the src value
+                    // Check if the src is relative (doesn't contain a protocol or domain)
+                    if (!preg_match('/^(https?:|\/\/)/', $src)) {
+                        $src = asset('videos/blog/' . ltrim($src, '/')); // Use asset helper for videos
+                    }
+                    // Reconstruct the video tag with the modified src
+                    return str_replace($matches[1], $src, $matches[0]);
+                },
+                $html
+            );
         @endphp
+
 
 
         <article class="prose sm:px-prosePadding" style="margin:auto">
