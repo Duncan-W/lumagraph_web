@@ -41,24 +41,37 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
+        // Validate the request data
         $request->validate([
-            'id' => 'required|string|unique:posts,id', // Ensure the ID is a unique string
+            'id' => 'required|string|unique:posts,id', // URL version of title
             'title' => 'required',
             'body' => 'required',
+            'image' => 'nullable|image|mimes:jpg,jpeg,png,gif,webp,avif,heif|max:20480', // Validate image file
         ]);
-
-        // Process the body field to replace incorrect backticks with correct Markdown
+    
+        // Process the body field
         $processedBody = str_replace('\`\`\`', '```', $request->input('body'));
-
-        // Create the post with the processed body
+    
+        // Handle the image upload
+        $imageName = null; // Default to null if no image is uploaded
+        if ($request->hasFile('image')) {
+            $imageFile = $request->file('image');
+            $imageName = $imageFile->getClientOriginalName(); // Get the original filename
+            $imageFile->storeAs('images/blog', $imageName, 'public'); // Save the image in the specified directory with the original filename
+        }
+    
+        // Create the post
         Post::create([
             'id' => $request->input('id'),
             'title' => $request->input('title'),
             'body' => $processedBody,
+            'image' => $imageName, // Store only the filename
         ]);
-
+    
         return redirect()->route('posts.index')->with('success', 'Post created successfully.');
     }
+    
+    
 
     /**
      * Display the specified resource.
