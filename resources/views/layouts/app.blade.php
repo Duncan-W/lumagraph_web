@@ -137,24 +137,37 @@
                     "@type": "OfferCatalog",
                     "name": "Tech Consultancy Services",
                     "itemListElement": [
-                        {
-                            "@type": "Offer",
-                            "itemOffered": {
-                                "@type": "Service",
-                                "name": "Data Management Consulting"
-                            }
-                        },
-                        {
+                    {
+                        "@type": "Offer",
+                        "itemOffered": {
                             "@type": "Service",
-                            "name": "AI Strategy Consulting"
-                            }
-                        ]
-                    }
+                            "name": "Data Management Consulting"
+                        }
+                    },
+                    {
+                        "@type": "Service",
+                        "name": "AI Strategy Consulting"
+                        }
+                    ]
                 }
             }
             </script>
         @endif
 
+        <!-- PWA service worker registration -->
+        <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+            navigator.serviceWorker.register('/service-worker.js')
+                .then((registration) => {
+                console.log('ServiceWorker registered:', registration);
+                })
+                .catch((error) => {
+                console.log('ServiceWorker registration failed:', error);
+                });
+            });
+        }
+        </script>
 
         
        
