@@ -73,3 +73,17 @@ Route::post('/login', [AuthController::class, 'login']
 )->name('auth.login');
 
 
+// Static route (catch-all) for Russell product pages in public
+Route::get('/{page}', function ($page) {
+    // Build the path to the static file
+    $path = public_path("static/{$page}.html");
+
+    // Check if the file exists
+    if (file_exists($path)) {
+        return response()->file($path);
+    }
+
+    abort(404);
+})->where('page', '[a-zA-Z0-9_-]+');
+
+
