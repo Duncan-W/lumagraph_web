@@ -2,7 +2,7 @@
         <nav id="menu" class="bg-white border-gray-200 py-2.5 dark:bg-gray-900">
             <div class="flex flex-wrap items-center justify-between max-w-screen-xl px-4 mx-auto">
                 <a href="{{ route('home') }}" class="flex items-center">
-                    <img src="{{ asset('images/lumagraph.svg') }}" class="h-6 mr-3 sm:h-9 darkmode" alt="Lumagraph Logo" />
+                    <img src="{{ asset('images/lumagraph.svg') }}" width="36" class="h-6 mr-3 sm:h-9 darkmode" alt="Lumagraph Logo" />
                     <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Lumagraph</span>
                 </a>
                 <div class="flex items-center lg:order-2">
@@ -78,7 +78,7 @@
     </header>
 
     <!-- Login modal -->
-    <div id="loginModal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50  h-full md:inset-0 h-modal lg:max-w-lg" style="margin:auto">
+    <div id="loginModal" tabindex="-1" aria-hidden="true" data-modal-target="loginModal"  class="defaultModal hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50  h-full md:inset-0 h-modal lg:max-w-lg" style="margin:auto;">
         <div class="relative  p-4 w-full max-w-2xl h-full md:h-auto">
             <!-- Modal content -->
             <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">

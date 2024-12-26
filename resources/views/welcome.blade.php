@@ -5,7 +5,7 @@
 
 
 <!-- Phone contact modal -->
-<div id="phoneModal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50  h-full md:inset-0 h-modal lg:max-w-lg" style="margin:auto">
+<div id="phoneModal" data-modal-target="phoneModal" tabindex="-1" aria-hidden="true" class="defaultModal hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50  h-full md:inset-0 h-modal lg:max-w-lg" style="margin:auto">
     <div class="relative  p-4 w-full max-w-2xl h-full md:h-auto">
         <!-- Modal content -->
         <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
@@ -191,7 +191,7 @@ HTMLVideoElement.prototype.playBackwards = function () {
             <div class="max-w-screen-sm mx-auto text-center">
                 <h2 class="mb-4 text-3xl font-extrabold leading-tight tracking-tight text-gray-900 dark:text-white">Get your free quote today</h2>
                 <p class="mb-6 font-light text-gray-500 dark:text-gray-400 md:text-lg">Assessment and proposal design available</p>
-                <button data-modal-toggle="phoneModal" class="text-white bg-blue-800 hover:bg-blue-900 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-800 focus:outline-none dark:focus:ring-blue-900">Arrange consultation</button>
+                <button data-modal-toggle="phoneModal"  class="text-white bg-blue-800 hover:bg-blue-900 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-800 focus:outline-none dark:focus:ring-blue-900">Arrange consultation</button>
             </div>
         </div>
     </section>

@@ -19,8 +19,7 @@
         <meta name="robots" content="index, follow">
 
         <title>@yield('title', 'Lumagraph')</title>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js" defer></script>
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.css" rel="stylesheet">
+        
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
@@ -187,6 +186,13 @@
             background-attachment: fixed;
         }
 
+        body.dimmed *:not(.defaultModal):not(.defaultModal *) {
+            background-color: rgba(0, 0, 0, 0.8); /* Darken non-modal elements */
+             visibility: hidden; /* Make elements completely invisible */
+            pointer-events: none; /* Disable interactions */
+        }
+
+
         @media (prefers-color-scheme: dark) {
             .darkmode  {
                 filter: invert(1) !important;
@@ -228,5 +234,14 @@
         @include('components.header')
         @yield('content')
         @include('components.footer')
+        <script>
+            document.addEventListener('click', function (event) {
+                // Check if the clicked element is a button and has the 'data-modal-toggle' attribute
+                const button = event.target.closest('button[data-modal-toggle]');
+                if (button) {
+                    document.body.classList.toggle('dimmed');
+                }
+            });
+        </script>
     </body>
 </html>

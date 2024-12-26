@@ -3,7 +3,7 @@ export default {
   content: [
     "./resources/**/*.blade.php",
     "./resources/**/*.js",
-    "./resources/**/*.vue",
+    "./resources/**/*.vue",    
   ],
   theme: {
     extend: {
@@ -12,5 +12,5 @@ export default {
       }
     },
   },
-  plugins: [require('@tailwindcss/typography'),],
+  plugins: [require('@tailwindcss/typography'),require('flowbite/plugin')],
 }
